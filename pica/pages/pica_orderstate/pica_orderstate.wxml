@@ -1,0 +1,37 @@
+<!--pica/pages/pica_orderstate/pica_orderstate.wxml-->
+<view class="orders">
+    <view class="state">
+      <view data-id="200" bindtap="changeTabber" class="{{activeIndex==200?'active':''}}">全部</view>
+      <view data-id="20" bindtap="changeTabber" class="{{activeIndex==20?'active':''}}">已付款</view>
+      <view data-id="21" bindtap="changeTabber" class="{{activeIndex==21?'active':''}}">设计中</view>
+      <view data-id="30" bindtap="changeTabber" class="{{activeIndex==30?'active':''}}">待确认</view>
+      <view data-id="40" bindtap="changeTabber" class="{{activeIndex==40?'active':''}}">已完成</view>
+    </view>
+</view>
+<view class="orderDetail" wx:for="{{meal}}" data-order_id="{{item.order_id}}" wx:key="{{index}}" wx:if="{{!isnull}}">
+    <view class="order-item">
+        <view class="order-nav nav1">
+            <view>订单编号:{{item.order_sn}}</view>
+            <view>{{item.status_str}}</view>
+        </view>
+        <view class="order-nav nav2">
+            <view>{{item.setmeal_name}}</view>
+            <view>￥{{item.order_amount}}</view>
+        </view>
+        <view class="order-nav nav3">
+            <view>{{item.add_time}}</view>
+            <view class="btns-box">
+              <view class="but" wx:if="{{item.status==11}}" data-order_id="{{item.order_id}}" bindtap="test">付款</view>
+              <view class="but" wx:if="{{item.status==11}}" data-order_id="{{item.order_id}}" bindtap="cencle">取消订单</view>
+              <view class="but" wx:if="{{item.status==30}}" data-order_id="{{item.order_id}}" bindtap="sure">确认</view>
+              <view class="but" wx:if="{{item.status==30}}" data-order_id="{{item.order_id}}" bindtap="gosure">前往确认</view>
+            </view>
+            
+        </view>
+    </view>
+</view>
+<view class="noOrder" wx:if="{{isnull}}">
+    <image src="../../../src/image/order.png"></image>
+    <view class="text">您还没有相关的订单</view>
+</view>
+

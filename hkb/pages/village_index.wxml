@@ -1,0 +1,30 @@
+<!--hkb/pages/village_index.wxml-->
+<!-- swiper -->
+<SwiperComponent name="SwiperComponent" swiper="{{swiper}}"></SwiperComponent>
+
+<!-- 上派集成社 -->
+<brief name="brief" brief="{{brief}}"></brief>
+
+<!-- 品牌商品 -->
+<!-- <goodlist  name="goodlist" brand="{{brand}}"  bind:myevent="goGoodDet"></goodlist> -->
+
+<view class="brandgoods">
+  <view class="brandhead listhead">小区订制</view>
+  <view class="havenone" wx:if="{{village.pcategory.length<=0}}">您暂时还没有商品~</view>
+    <!-- <view class="order-title">订单号：{{index}}</view> -->
+  <view class="one-order listitembox">
+    <view class="listitems"
+      bindtap="goGoodDet"
+      data-housing_name="{{item.housing_name}}"
+      data-imgsrc="{{item.housing_img}}"
+      data-houseid="{{item.id}}"
+      wx:for="{{village.pcategory}}" 
+      wx:key="{{index}}">
+      <view class="imgbox">
+        <image src="{{item.housing_img}}" class="listitem-img" mode="aspectFit" />
+      </view>
+      <view class="listitem-text">{{item.housing_name}}</view>
+    </view>
+  </view>
+  
+</view>

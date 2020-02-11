@@ -1,0 +1,28 @@
+<!--hkb/share_good/share_good.wxml-->
+<!-- 轮播图 -->
+<SwiperComponent name="SwiperComponent" swiper="{{swiper}}"></SwiperComponent>
+
+<!-- 上派集成社 -->
+<brief name="brief" brief="{{brief}}"></brief>
+
+<!-- 品牌商品 -->
+<!-- <goodlist  name="goodlist" brand="{{brand}}"  bind:myevent="goGoodDet"></goodlist> -->
+
+<!-- <template name="goodlist"> -->
+<view class="brandgoods">
+    <view class="brandhead listhead">
+        品牌商品
+    </view>
+    <view class="listitembox">
+        <view class="havenone" wx:if="{{!brand.pcategory.length}}">您暂时还没有商品~</view>
+        <view class="listitems" bindtap="goGoodDet" wx:for="{{brand.pcategory}}" data-p_id="{{item.cate_id}}" wx:key="index">
+            <view class="imgbox">
+                <image src="{{item.cate_images}}" class="listitem-img"  mode="aspectFit"/>
+            </view> 
+            <view class="listitem-text">{{item.cate_name}}</view>
+        </view>
+    </view>
+</view>
+<!-- </template> -->
+<getphone name="getphone"  wx:if="{{!isDiaShow}}"></getphone>
+

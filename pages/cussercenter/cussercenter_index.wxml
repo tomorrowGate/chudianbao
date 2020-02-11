@@ -1,0 +1,15 @@
+<!--pages/cussercenter/cussercenter.wxml-->
+<!-- <view class="custom-list">
+    <view class="how list-item">如何进行品牌入驻？<i class="iconfont icon-iconfontjiantou2"></i></view>
+    <view class="how list-item">如何进行经销商入驻？<i class="iconfont icon-iconfontjiantou2"></i></view>
+    <view class="how list-item">一位经销商如何在平台注册多个账号？<i class="iconfont icon-iconfontjiantou2"></i></view>
+    <view class="how list-item">小区订制有何优势？<i class="iconfont icon-iconfontjiantou2"></i></view>
+    <view class="how list-item">如何通过厨店宝获得更多客户？<i class="iconfont icon-iconfontjiantou2"></i></view>
+</view> -->
+
+<view class="service" >
+  <view class="service-item line"  bindtap="goDetail" wx:for="{{articles}}" wx:key="index" data-a_id="{{item.article_id}}">
+      <view class="text">{{item.title}}<i class="iconfont icon-iconfontjiantou2 go"></i></view>
+  </view>
+</view>
+

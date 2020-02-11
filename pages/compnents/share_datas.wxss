@@ -1,0 +1,54 @@
+/* pages/compnents/share_datas.wxss */
+/* 我的经销商 */
+@import "/app.wxss";
+.distributor{
+    display: flex;
+    height: 285rpx;
+    background: #fff;
+    margin: 20rpx 0;
+    box-shadow: 0 0 10rpx #f0f0f0;
+}
+.distributor-left{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 255rpx;
+    background: rgb(235,246,255);
+}
+.distributor-left .mydis-key{
+    position: absolute;
+    top:35rpx;
+    font-size: 30rpx;
+    color: #999;
+}
+.distributor-left .mydis-val{
+    margin: auto;
+    font-size: 30rpx;
+    color: #1f9cfd;
+}
+.distributor-left .mydis-val-num{
+  font-size: 40rpx;
+}
+.distributor-right{
+    display: flex;
+    flex-wrap: wrap;
+    flex:1;
+}
+.distributor-share{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+}
+.distributor-share .mydis-key{
+  font-size: 30rpx;
+    color: #999;
+}
+.distributor-share .mydis-val{
+  font-size: 30rpx;
+  font-weight: bold;
+}

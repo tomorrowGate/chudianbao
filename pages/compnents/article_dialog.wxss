@@ -1,0 +1,128 @@
+/* pages/compnents/article_dialog.wxss */
+button::after{
+  border:none;
+}
+.getPhoneNumber{
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(to right,#3fc9f8, #1f9cfd);
+  color: #fff;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+}
+.dialog-out{
+  display: flex;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4)
+}
+
+.dialog,.dialog-rotate {
+  overflow: hidden;
+  width: 650rpx;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10%;
+  left: 50rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  z-index: 15;
+}
+.dialog{
+  transform: rotateX(90deg);
+}
+.dialog-rotate{
+  transform: rotateX(0deg);
+}
+
+.input-title{
+  height: 70rpx;
+  color: #1f9cfd;
+  font-size: 60rpx;
+  font-weight: bold;
+  /* box-reflect: below 0 radial-gradient(#000 30%,transparent); */
+  -webkit-box-reflect:below 15rpx linear-gradient(to top, rgba(255,255,255,0.3) ,transparent);
+}
+
+.title{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #1f9cfd;
+  color: #fff;
+  text-align: left;
+  text-indent: 20rpx;
+}
+
+.dialog-input {
+  border: 1rpx solid #999;
+  padding: 10rpx;
+  width: 430rpx;
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx auto;
+  align-items: center;
+}
+.input .input-label{
+  font-size: 35rpx;
+  margin-top: 120rpx;
+  margin-right: 20rpx;
+}
+
+.dialog-bottom {
+  position: absolute;
+  display: flex;
+  left: 10%;
+  bottom: 40rpx;
+  height: 80rpx;
+  width: 80%;
+  line-height: 80rpx;
+}
+
+.button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* border-top: 1rpx solid #666; */
+  background: #aaa;
+  color: #fff;
+  border-radius: 40rpx;
+}
+
+.button+.button {
+  /* border-left: 1rpx solid #666; */
+  background: #1f9cfd;
+  color: #fff
+}
+
+.scale{
+  height: 50vh;
+  padding: 20rpx;
+  box-sizing: border-box;
+  transform-origin:center center;
+  transform: scaleY(0)
+}
+.input-head{
+ margin-bottom: 30rpx;
+ font-size: 35rpx;
+ font-weight: bold;
+}
+.input-body{
+  height: 38vh;
+}
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}

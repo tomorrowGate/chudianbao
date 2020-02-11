@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "dialog": "/pages/compnents/dialog_index",
+    "brief": "/pages/compnents/brief",
+    "SwiperComponent": "/pages/compnents/swiper"
+  }
+}

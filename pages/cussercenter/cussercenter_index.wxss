@@ -1,0 +1,45 @@
+/* pages/cussercenter/cussercenter.wxss */
+.custom-list{
+}
+.list-item{
+    
+    display: flex;
+    justify-content: space-between;
+    height: 104rpx;
+    line-height: 104rpx;
+    padding:0 32rpx;
+    font-size: 32rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list-item+.list-item{
+    border-top:1rpx solid #ccc;
+}
+.icon-iconfontjiantou2{
+    color: #ccc;
+}
+
+/* copy */
+.service{
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.service-item{
+  display:flex;
+  position: relative;
+  justify-content: flex-start;
+  line-height: 90rpx;
+  height:90rpx;
+  font-size:32rpx;padding:0 25rpx;box-sizing: border-box;
+}
+.go{
+  position: absolute;
+  right:30rpx;
+}
+
+.line{
+  border-bottom: 1px solid #f0f3f0;
+}

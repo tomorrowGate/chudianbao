@@ -1,0 +1,29 @@
+<!--pages/compnents/ gallery.wxml-->
+<view class="fix-page" catchtap="toggleDialog" wx:if="{{gallery.showDialog}}"></view>
+<view class="dialog-main" catchtap="stopProp" animation="{{animation}}"  wx:if="{{!gallery.isBrandShow}}">
+  <view class="dialog-conimg">
+    <image src="{{gallery.imgsrc}}" mode="aspectFit" />
+  </view>
+  <view class="gallery-text">
+    <view class="gallery-text-left">{{gallery.text}}</view>
+    <view class="gallert-text-light">平方数{{gallery.square}}</view>
+  </view>
+  <view class="button">
+    <button class="btn" bind:tap="sure">查看VR全景</button>
+  </view>
+</view>
+
+<!-- 品牌商显示 -->
+<view class="dialog-main-brand" catchtap="stopProp" animation="{{animation}}" wx:if="{{gallery.isBrandShow}}">
+  <view class="dialog-conimg">
+    <image src="{{gallery.imgsrc}}" mode="aspectFit" />
+  </view>
+  <view class="gallery-text" hidden="{{true}}">
+    <view class="gallery-text-left">{{gallery.text}}</view>
+    <view class="gallert-text-light">平方数{{gallery.square}}</view>
+  </view>
+  <view class="button">
+    <button class="btn" bind:tap="sure">查看VR全景</button>
+  </view>
+</view>
+<slot></slot>

@@ -1,0 +1,25 @@
+<!--pages/compnents/dialog_index.wxml-->
+<view class="fix-page"  bind:tap="toggleDialog" wx:if="{{!dialog.isDone}}"  animation="{{animation}}">
+    <view class="dialog-main" catchtap="stopProp">
+        <view class="dialog-log">
+            <view class="dialog-top">厨</view>
+        </view>
+        <view class="dialog-title">
+            厨店宝
+        </view>
+        <view class="dialog-con">
+            {{dialog.showText}}
+        </view>
+        <view class="dialog-conimg">
+            <image src="../../src/image/cook_bg.png" mode="aspectFit"/>
+        </view>
+        <view class="dialog-disign">
+            为您设<text class="blue">计  为</text> <text class="blue"> </text>您签单
+        </view>
+        <view class="dislog-en">DESIGN FOR YOU SIGN THE BILL FOR YOU</view>
+        <view class="button">
+            <button class="btn" bind:tap="sure">{{dialog.btnText}}</button>
+        </view>
+    </view>
+</view>
+<!-- <view class="fix-out-page"></view> -->

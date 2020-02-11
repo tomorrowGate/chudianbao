@@ -1,0 +1,15 @@
+<!--pages/compnents/getphone_dialog.wxml-->
+<view class="{{isMaskHide?'dialog':'dialog-rotate'}}" animation="{{animationData}}">
+  <view class="title" hidden="{{true}}">手机认证</view>
+  <view class="input">
+    <view class="input-title">厨电宝</view>  
+    <view class="input-label">希望获取您的手机号</view>
+  </view>
+  <view class="dialog-bottom">
+    <!-- <view class="cencle button" bindtap="cencle" data-type="cencle">取消</view> -->
+    <view class="sure button" data-type="{{isPhoneInput?'phone':'wx'}}">
+      <button class="getPhoneNumber" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">确定</button>
+    </view>
+  </view>
+</view>
+<view class="dialog-out" animation="{{animationData2}}" bindtap="cencle" hidden="{{isMaskHide}}"></view>

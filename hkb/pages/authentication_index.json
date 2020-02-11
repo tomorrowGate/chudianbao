@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "身份认证",
+  "usingComponents": {
+    "dialog": "/pages/compnents/dialog_index"
+  }
+}

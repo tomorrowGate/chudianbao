@@ -1,0 +1,60 @@
+/* hkb/pages/goods_brand.wxss */
+page{
+    background: #f6f6f6;
+  }
+  
+  /* 第一个轮播图 */
+  .swiper{
+    height:260px
+  }
+  .swiper  .wx-swiper-dots.wx-swiper-dots-horizontal{
+    margin-bottom: -10rpx;
+  }
+  .swiper-item image{
+    width: 100%;
+  }
+ 
+
+  /* 品牌商品 */
+  .brandgoods{
+      background: #fff;
+      padding:26rpx;
+  }
+  .listhead{
+    font-size: 35rpx;
+    font-weight: bold;
+    height: 100rpx;
+    padding:0 18rpx;
+    line-height: 100rpx;
+    border-bottom:1rpx solid #ccc;
+  }
+  .listitembox{
+      display: flex;
+      /* justify-content: space-between; */
+      flex-wrap:wrap;
+      font-size: 32rpx;
+      padding:24rpx 0;
+  }
+  .listitembox .listitems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;
+    margin-bottom: 18rpx;
+  }
+  .listitems .imgbox{
+      width: 218rpx;
+      height: 148rpx;
+      /* background: #000; */
+      border-radius:10rpx;
+  }
+  .listitem-img{
+      width: 100%;
+      height: 100%;
+  }
+  .havenone{
+    height: 148rpx;
+    line-height: 148rpx;
+    text-align: center;
+  }

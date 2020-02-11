@@ -1,0 +1,84 @@
+<!--hkb/pages/customized.wxml-->
+
+<!-- 立即购买 -->
+<!-- wx:if="{{isShowMeal}}" -->
+<view >
+  <view class="head">
+    <view class="p-nor">定制下单 打造您的专属VR影像</view>
+    <view class="light" hidden="{{true}}">查看套餐类型 <i class="iconfont icon-iconfontjiantou2"></i> </view>
+  </view>
+  <view class="set-meal">
+    <view class="meal-item {{selectMeal==(item.id)?'active':''}}" 
+    bindtap="changeItem" 
+    wx:for="{{setmeal}}"
+    wx:key="{{index}}" 
+    data-id="{{item.id}}"
+    data-index="{{index}}">
+      <view class="meal-title">{{item.setmeal_name}}</view>
+      <view class="meal-body">￥<text class="meal-money">{{item.setmeal_price}}</text> </view>
+      <view class="meal-del-money">￥{{item.setmeal_oprice}}</view>
+    </view>
+  </view>
+
+
+  <view class="p-foot">
+    <view class="p-title">套餐说明</view>
+    <view class="p">
+      <view class="meal-say" bindtap="showSay">
+        <view class="meal-say-left">
+          ￥<text class="meal-money">{{setmeal[selectIndex].setmeal_price}}</text>
+        </view>
+        <view class="meal-say-right">
+          <text class="meal-say-bold">{{setmeal[selectIndex].setmeal_name}}</text>
+          <text class="meal-say-nor">{{setmeal[selectIndex].setmeal_remark}}</text>
+        </view>
+      </view>
+      <!-- {{setmeal[selectMeal-1].setmeal_remark?setmeal[selectMeal-1].setmeal_remark:"请先选择套餐"}} -->
+      <!-- <view class="meal-say">
+        请选择套餐
+      </view> -->
+    </view>
+  </view>
+
+  <view class="p-foot">
+    <view class="p-title">订制流程</view>
+    <view class="p-step">
+      <view class="p-step-text">选择套餐并填写相关信息</view>
+      <view> 
+        <image src="/src/image/next.png" class="p-next" mode="aspectFit"></image> 
+      </view>
+      <view class="p-step-text">确认支付并发送文件至指定邮箱</view>
+      <view> 
+        <image src="/src/image/next.png" class="p-next" mode="aspectFit"></image> 
+      </view>
+      <view class="p-step-text">等待设计师进行VR设计</view>
+      <view> 
+        <image src="/src/image/next.png" class="p-next" mode="aspectFit"></image> 
+      </view>
+      <view class="p-step-text">审查设计稿并做确认</view>
+      <view> 
+        <image src="/src/image/next.png" class="p-next" mode="aspectFit"></image> 
+      </view>
+      <view class="p-step-text">完成订制</view>
+    </view>
+  </view>
+
+  <view class="button-foot">
+    <button class="button-foot-item {{isUserShow?'actice':'' }}" bindtap="user" data-type="user">用户协议</button>
+    <button class="button-foot-item {{isPrivacyShow?'actice':'' }}" bindtap="privacy" data-type="privacy">隐私条款</button>
+  </view>
+
+  <view class="sub"> <button class="submit" bindtap="goBuyMeal">确认下单</button> </view>
+ <!--  <view class="sub"> <button class="submit" bindtap="test3">确认下单</button> </view>
+ -->
+  <view class="dialog" animation="{{animation}}">
+    <view> 请把您的文件打包到以下邮箱</view>
+    <view class="email">2474827323@qq.com</view>
+    <view class="know" bindtap="dialog">我知道了</view>
+  </view>
+</view>
+
+<artDia name="artDia" isMask="{{isMask}}" detail="{{setmeal[selectIndex]}}"></artDia>
+<!-- <view class="center" wx:if="{{isShowMeal}}">
+  该品牌暂无套餐可选择
+</view> -->

@@ -1,0 +1,36 @@
+<!--pica/pages/pica_feedback/pica_feedback.wxml-->
+<view class="suggest">
+    <view class="header">问题和建议</view>
+    <view class="input">
+      <textarea name="suggestion" id="suggestion" placeholder="写下您对我们的建议或发现的系统问题哦~" bindinput="set_value" data-str="content"></textarea>
+    </view>
+</view>
+<view class="picture">
+  <view class="header">图片(选填，提供问题截图)</view>
+  <view class="iconcontact" bindtap="chooseImg"><image src="../../../src/image/add.png"></image></view>
+
+<!-- 查看图片 -->
+  <view class="question-images">
+    <block wx:for="{{images}}" wx:key="index">
+      <view class="q-image-wrap">
+        <!-- 图片缩略图  -->
+        <image 
+        class="q-image" 
+        src="{{item}}" 
+        mode="aspectFill" 
+        data-idx="{{index}}"
+        bindtap="handleImagePreview"></image>
+        <!-- 移除图片的按钮  -->
+        <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+      </view>
+    </block>
+  </view>
+
+</view>
+<view class="contact">
+  <view class="header">联系方式(选填)</view>
+  <view class="inputContact">
+      <textarea name="lianxi" id="lianxi" placeholder="如果有需要，请留下微信或电话" bindblur="set_value"  data-str="number"></textarea>
+    </view>
+</view>
+<button class="but" disabled="{{!canClick}}" bindtap="submitForm">提交</button> 

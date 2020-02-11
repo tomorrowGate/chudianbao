@@ -1,0 +1,44 @@
+<!--pages/compnents/share_datas.wxml-->
+
+<view class="distributor" bindtap="goStatistics">
+    <!-- 品牌总部 -->
+    <view class="distributor-left" wx:if="{{identity==2}}">
+        <view class="mydis-key">我的经销商</view>
+        <view class="mydis-val">
+            <text class="mydis-val-num">{{sharesData.myDistribute}}</text>位
+        </view>
+    </view>
+    <!-- 经销商 -->
+    <view class="distributor-left" wx:if="{{identity==1||identity==3}}">
+        <view class="mydis-key">累计客户</view>
+        <view class="mydis-val">
+            <text class="mydis-val-num">{{sharesData.myCustomer}}</text>位
+        </view>
+    </view>
+    <view class="distributor-right">
+        <view class="distributor-share">
+            <view class="mydis-key">本周分享</view>
+            <view class="mydis-val">
+                <text class="mydis-val-num">{{sharesData.weekShare}}</text>
+            </view>
+        </view>
+         <view class="distributor-share">
+            <view class="mydis-key">本周浏览</view>
+            <view class="mydis-val">
+                <text class="mydis-val-num">{{sharesData.weekView}}</text>
+            </view>
+        </view>
+         <view class="distributor-share">
+            <view class="mydis-key">累计分享</view>
+            <view class="mydis-val">
+                <text class="mydis-val-num">{{sharesData.totalShare}}</text>
+            </view>
+        </view>
+         <view class="distributor-share">
+            <view class="mydis-key">累计浏览</view>
+            <view class="mydis-val">
+                <text class="mydis-val-num">{{sharesData.totalView}}</text>
+            </view>
+        </view>
+    </view>
+</view>

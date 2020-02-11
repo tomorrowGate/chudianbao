@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block >
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">您好 <text class="blue">{{userInfo.nickName}}</text> ，登陆小程序请先授权</text>
+    </block>
+    <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 获取手机号</button> -->
+    <button class="getUserInfo" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取微信授权 </button>
+  </view>
+ <!--  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>
+
+<!-- <getphone bind:getPhoneNumber="getPhoneNumber"></getphone> -->
+
+
+

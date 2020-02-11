@@ -1,0 +1,23 @@
+/* pica/pages/pica_service/pica_service.wxss */
+.service{
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.service-item{
+  display:flex;
+  position: relative;
+  justify-content: flex-start;
+  line-height: 90rpx;
+  height:90rpx;
+  font-size:32rpx;padding:0 25rpx;box-sizing: border-box;
+}
+.go{
+  position: absolute;
+  right:30rpx;
+}
+
+.line{
+  border-bottom: 1px solid #f0f3f0;
+}

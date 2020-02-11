@@ -1,0 +1,77 @@
+<!--hkb/pages/meal_buy.wxml-->
+<view class="head">
+  <view class="p-title">套餐说明</view>
+  <view class="p">
+    <view class="meal-say">
+      <view class="meal-say-left">￥
+        <text class="meal-money">{{formList.setmeal_price}}</text>
+      </view>
+      <view class="meal-say-right">
+        <text class="meal-say-bold">{{formList.setmeal_name}}</text>
+        <text class="meal-say-nor">{{formList.setmeal_remark}}</text>
+      </view>
+    </view>
+    <view class="meal-intro">
+      定制下单后请将户型平面图、户型实拍照、产品照片发送到指定邮箱：
+      <text class="emile">{{emile}}</text>
+      <text class="clip-bord" bindtap="copyTBL"> 复制邮箱</text>
+    </view>
+  </view>
+</view>
+
+
+<view class="info-detial">
+    <view class="info-item">
+        <view class="info-key">定制详情</view>
+        <view class="info-value">
+            <view class="shop-circle {{brief.isshopbrief?'rotatestar':'rotate'}}">
+                <i class="iconfont icon-iconfontjiantou2"></i>
+            </view>
+        </view>
+    </view>
+
+    <view class="form-out" wx:for="{{apartment_count}}" wx:key='{{index}}'>
+      <view class="detail-per">
+          <view class="info-item">
+              <view class="info-key">小区名称</view>
+              <view class="info-value">
+                  <input 
+                  class="text-name"  
+                  placeholder="请输入您的小区" 
+                  bindinput="set_value" 
+                  data-canshu="village"
+                  data-index = "{{index}}"/>
+              </view>
+          </view>
+          <view class="info-item">
+              <view class="info-key">户型名称</view>
+              <view class="info-value">
+                  <input 
+                  class="text-name"  
+                  placeholder="请输入您的户型" 
+                  bindinput="set_value" 
+                  data-canshu="apartment"
+                  data-index = "{{index}}"/>
+              </view>
+          </view>
+          <view class="info-item">
+              <view class="info-key">面积</view>
+              <view class="info-value">
+                  <input 
+                  class="text-name"  
+                  placeholder="请输入您的户型面积" 
+                  bindinput="set_value"
+                  data-index = "{{index}}"
+                  data-canshu="area"/>
+              </view>
+          </view>
+      </view>
+    </view>
+
+    <view class="add-meal" bindtap="addOne" hidden="{{true}}">
+      <i class="iconfont icon-tianjia1"></i><text>点击添加</text>
+    </view>
+
+</view>
+
+<view class="sub"> <button class="submit" bindtap="test3">立即购买</button> </view>

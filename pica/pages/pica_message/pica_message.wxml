@@ -1,0 +1,57 @@
+<!--pica/pages/pica_message/pica_message.wxml-->
+<view class="message">
+    <view class="mymessage">
+        <view class="header">我的消息</view>
+        <view class="info">{{msg_count}}条未读消息
+            <view class="dot1" ><i class="iconfont icon-dasao icon1"></i></view>
+        </view>
+    </view>
+    <view class="total stickyClass" id="affix">
+        <view  class="official item" data-m_cate="0" bindtap="get_message_count">
+            <view class="dott1 dot"><i class="iconfont icon-qiu icon"></i><view class="num" wx:if="{{msg_count_gf>0}}">{{msg_count_gf}}</view></view>
+            
+            <view class="text">官方消息</view>
+        </view>
+        <view class="custom item" data-m_cate="1" bindtap="get_message_count">
+            <view class="dott2  dot"><i class="iconfont icon-laba icon"></i><view class="num" wx:if="{{msg_count_dz>0}}">{{msg_count_dz}}</view></view>
+            <view  class="text">定制消息</view>
+        </view>
+        <view class="cusomer item" data-m_cate="2" bindtap="get_message_count">
+            <view class="dott3  dot"><i class="iconfont icon-icon-- icon"></i><view class="num" wx:if="{{msg_count_kh>0}}">{{msg_count_kh}}</view></view>
+            <view  class="text">客户消息</view>
+        </view>
+    </view>
+</view>
+<view class="body">
+  <view class="body-item" wx:for="{{message}}" wx:key="index"  data-mid="{{item.msg_id}}" bindtap="to_message">
+      <view class="aa">
+        <view class="item-left">
+            <i class="iconfont icon-qiu ico "></i><view class="btu" wx:if="{{item.is_read==0}}"></view>
+        </view>
+        <view class="item-right">
+            <view class="mesg">
+              {{item.title}}<view class="data">{{item.add_time}}</view>
+            </view>
+            <view class="msg-content">
+                {{item.content}}
+            </view>
+        </view>
+      </view>
+  </view>
+  <!-- <view class="body-item">
+      <view class="aa">
+        <view class="item-left">
+            <i class="iconfont icon-qiu ico "></i><view class="btu"></view>
+        </view>
+        <view class="item-right">
+            <view class="mesg">
+              官方消息<view class="data">星期六</view>
+            </view>
+            <view class="msg-content">
+                爱空间电话卡USD发的库
+            </view>
+        </view>
+      </view>
+  </view> -->
+  
+</view>

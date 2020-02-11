@@ -1,0 +1,28 @@
+
+<view class="perInfo">
+  <view class="content">
+    <view class="per-item line">
+        <view class="per-left">昵称</view>
+        <view class="per-right">{{username||""}}<i class="iconfont icon-iconfontjiantou2 go"  wx:if="{{false}}"></i></view>
+    </view>
+    <view  class="per-item line">
+        <view class="per-left">头像</view>
+        <view class="per-right">
+          <image class="avitor"src="{{imgUrls}}" bindtap="goIntoInfo"></image>
+          <i class="iconfont icon-iconfontjiantou2 go" wx:if="{{false}}"></i></view>
+    </view>
+    <view  class="per-item line">
+      <view class="per-left">品牌</view>
+      <view class="per-right">{{brandorigin||""}}<i class="iconfont icon-iconfontjiantou2 go"  wx:if="{{false}}"></i></view>
+    </view>
+    <view  class="per-item line">
+      <view class="per-left">身份</view>
+      <view class="per-right">{{brandname||""}}<i class="iconfont icon-iconfontjiantou2 go" wx:if="{{false}}"></i></view>
+    </view>
+    <view  class="per-item line">
+      <view class="per-left">地址</view>
+      <view class="per-right">{{address||""}}<i class="iconfont icon-iconfontjiantou2 go" wx:if="{{false}}"></i></view>
+    </view>
+     
+  </view>
+</view>

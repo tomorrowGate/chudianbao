@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "定制下单",
+  "usingComponents": {
+    "artDia": "/pages/compnents/article_dialog"
+  }
+}

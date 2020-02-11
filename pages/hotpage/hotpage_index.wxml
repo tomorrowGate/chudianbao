@@ -1,0 +1,7 @@
+<!--pages/hotpage/hotpage_index.wxml-->
+<view class="pagetitle" >{{title}}</view>
+<view class="sendtime">{{time}}</view>
+
+<view class="pagecontent">
+    <text class="p">{{content}}</text>
+</view>

@@ -1,0 +1,78 @@
+<!--pages/compnents/personcard.wxml-->
+<!-- 商家信息 -->
+<view class="out-box">
+ <view class="shop" bindtap="gotMoreshopMsg" >
+    商家信息
+    <view class="shop-circle {{brief.isshopbrief?'rotatestar':'rotate'}}"><i class="iconfont icon-jiantou1 icon1 "></i>
+    </view>
+  </view>
+  <view class="msg" hidden="{{!brief.isshopbrief}}">
+      <view class="msg-item line">
+          <view>手机</view>
+          <view class="value" >
+            <input 
+              type="number"
+              class="{{storeInfo.isInput?'input':''}} {{storeInfo.isErro?'erroinput':''}}" 
+              value="{{share.isShare?shareInfo.phone_mob:phone_mob}}" 
+              focus="{{storeInfo.isInput}}" 
+              disabled="{{!storeInfo.isInput}}"
+              bindblur="checkTel"></input>
+          </view>
+          <view class="edit" bindtap="changeValue" hidden="{{true}}">{{storeInfo.isInput?"完成":"编辑"}}</view>
+          <view class="edit" bindtap="copy" data-context="{{share.isShare?shareInfo.phone_mob:phone_mob}}" wx:if="{{share.isShare}}">复制</view>
+      </view>
+      <view class="msg-item line">
+          <view>微信</view>
+          <view class="value">
+          <input 
+              class="{{storeInfo.isWxInput?'input':''}} {{storeInfo.isWxErro?'erroinput':''}}" 
+              value="{{share.isShare?shareInfo.wx_id:wx_id}}" 
+              focus="{{storeInfo.isWxInput}}" 
+              disabled="{{!storeInfo.isWxInput}}"
+              bindblur="checkWx"></input>
+          </view>
+          <view class="edit" bindtap="changeWx" hidden="{{true}}">{{storeInfo.isWxInput?"完成":"编辑"}}</view>
+          <view class="edit" bindtap="copy" data-context="{{share.isShare?shareInfo.wx_id:wx_id}}" wx:if="{{share.isShare}}">复制</view>
+      </view>
+      <view class="msg-item line">
+          <view>品牌</view>
+          <view class="value">{{share.isShare?shareInfo.brand_name:brand_name}}</view>
+          <view class="edit"  hidden="true" >编辑</view>
+          <view class="edit" bindtap="copy" data-context="{{shareInfo.brand_name}}" wx_id wx:if="{{share.isShare}}">复制</view>
+      </view>
+      <view class="msg-item">
+          <view>地址</view>
+          <view class="value">{{share.isShare?shareInfo.region_name:region_name}}</view>
+          <picker
+              class="edit" 
+              mode="region" 
+              bindchange="bindRegionChange" 
+              value="{{storeInfo.region}}"
+              custom-item="{{customItem}}"
+             >
+          </picker>
+          <view class="edit" bindtap="changeCity" hidden="{{true}}">{{storeInfo.isInputCity?"完成":"编辑"}}</view>
+          <view class="edit" bindtap="copy" data-context="{{shareInfo.region_name}}" wx:if="{{share.isShare}}">复制</view>
+      </view>
+      <view class="msg-item-region" hidden="{{!storeInfo.isInputCity}}">
+        <view class="city-smp">
+            <view class="cityvalue">
+                当前所选：
+                <view  class="dis-input">{{storeInfo.region[0]}}{{storeInfo.region[1]}}{{storeInfo.region[2]}}</view>
+            </view>
+            <picker
+                class="picker" 
+                mode="region" 
+                bindchange="bindRegionChange" 
+                value="{{storeInfo.region}}"
+                custom-item="{{customItem}}">
+                <view class="btn">请选择</view>
+            </picker>
+        </view>
+        <view class="city-det">
+            <view class="add-key">详细地址:</view>
+            <textarea value="{{address}}" bindblur="set_address"></textarea>
+        </view>
+      </view>
+  </view>
+</view>

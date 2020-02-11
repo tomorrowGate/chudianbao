@@ -1,0 +1,16 @@
+<!--pages/compnents/goodlist.wxml-->
+<view class="brandgoods">
+    <view class="brandhead listhead">
+        品牌商品
+    </view>
+    <view class="listitembox">
+        <view class="havenone" wx:if="{{!brand.pcategory.length}}">您暂时还没有商品~</view>
+        <view class="listitems" bindtap="goSkip" wx:for="{{brand.pcategory}}" data-p_id="{{item.cate_id}}" wx:key="index">
+            <view class=" {{brand.isImgRect?'imgbox-rect':'imgbox'}}">
+                <image src="{{item.cate_images}}" class="listitem-img"  mode="aspectFit"/>
+            </view> 
+            <view class="listitem-text">{{item.cate_name}}</view>
+        </view>
+    </view>
+    
+</view>

@@ -1,0 +1,27 @@
+<!--pica/pages/pica_sharecard/pica_sharecard.wxml-->
+<brief name="brief" brief="{{brief}}"></brief>
+
+<!-- 人物 -->
+<view class="box">
+  <view class="box-item">
+    <image class="avitor"src="{{imgUrls}}"></image>
+  </view>
+  <view  class="box-item box-center">
+    <view class="center-top">
+      <view class="user-name">{{username}}</view>
+      <view class="brand"> {{identity_str}}</view>
+    </view>
+    <view>
+      <text  class="center-bottom">{{brand_name}}</text>
+    </view>
+  </view>
+  <view  class="box-item item-left" >
+    <view class="change" bindtap="addPhoneContact">交换联系方式</view>
+    <button class="share" open-type="share">
+      分享名片
+    </button>
+  </view>
+</view>
+
+<personcard share="{{share}}" shareInfo="{{shareInfo}}"></personcard>
+

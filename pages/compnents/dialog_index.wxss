@@ -1,0 +1,92 @@
+/* pages/compnents/dialog_index.wxss */
+@import "/app.wxss";
+image{
+    width: 100%;
+    height: 100%;
+}
+.fix-out-page{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255); 
+    z-index:7;
+}
+.fix-page{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.2);
+    /* background: rgba(0,0,0,1); */
+    z-index:7;
+}
+.dialog-main{
+    width: 632rpx;
+    padding: 40rpx;
+    margin: auto;
+    background: #fff;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+}
+.dialog-log{
+    display: flex;
+    justify-content: center;
+    height: 90rpx;
+}
+.dialog-top{
+    width: 90rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    /* margin: auto; */
+    background: #1f9cfd;
+    color: #fff;
+    text-align: center;
+    font-size: 53rpx;
+    border-radius: 50%;
+}
+.dialog-title{
+    height: 78rpx;
+    line-height: 78rpx;
+    font-size: 35rpx;
+    font-weight: bold;
+    text-align: center;
+    color: #1f9cfd;
+}
+.dialog-con{
+    font-size: 32rpx;
+    text-align: center;
+}
+.dialog-conimg{
+    display: flex;
+    justify-content: center;
+    height: 320rpx;
+}
+.dialog-disign{
+    letter-spacing: 7rpx;
+    text-align: center;
+    font-weight: bold;
+}
+.blue{
+    color: #1f9cfd;
+}
+.dislog-en{
+    margin-bottom: 28rpx;
+    font-size: 14rpx;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.button .btn{
+  color: #fff;
+  background-color: #1f9cfd;
+  border-radius: 45rpx;
+}

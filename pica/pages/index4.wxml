@@ -1,0 +1,100 @@
+<!--pica/pages/index4.wxml-->
+<view class="box">
+  <view class="box-item">
+    <image class="avitor"src="{{imgUrls}}"></image>
+  </view>
+  <view  class="box-item box-center">
+    <view class="center-top">
+      <view class="user-name">{{username}}</view>
+      <view class="brand">{{brandname}}</view>
+    </view>
+    <view class="center-bottom">{{brandorigin}}</view>
+  </view>
+  <view  class="box-item item-left">
+    <view class="message"><i class="iconfont icon-xinxi icon1"></i></view>
+    <view class="dott-number">{{messagetotal}}</view>
+  </view>
+</view>
+<!-- 付款 -->
+<view class="pay" wx:if="{{isstore}}">
+  <view class="pay-item">
+      <i class="iconfont icon-fukuan icon2"></i>
+      <view class="pay-font">已付款</view>
+  </view>
+  <view class="pay-item">
+      <i class="iconfont icon-sheji icon2"></i>
+      <view class="pay-font">设计中</view>
+  </view>
+  <view class="pay-item">
+      <i class="iconfont icon-daiqueren icon2"></i>
+      <view class="pay-font">待确认</view>
+  </view>
+  <view class="pay-item">
+      <i class="iconfont icon-yiwancheng icon2"></i>
+      <view class="pay-font">已完成</view>
+  </view>
+</view>
+<!-- 我的经销商 -->
+<view class="distributor-box">
+  <view class="distributor">
+      <view class="distributor-left">
+          <view class="mydis-key">{{mystore}}</view>
+          <view class="mydis-val">
+              <text class="mydis-val-num">{{mystorenum}}</text>位
+          </view>
+      </view>
+      <view class="distributor-right">
+          <view class="distributor-share">
+              <view class="mydis-key">本周分享</view>
+              <view class="mydis-val">
+                  <text class="mydis-val-num">{{weekshare}}</text>
+              </view>
+          </view>
+          <view class="distributor-share">
+              <view class="mydis-key">本周浏览</view>
+              <view class="mydis-val">
+                  <text class="mydis-val-num">{{weeklook}}</text>
+              </view>
+          </view>
+          <view class="distributor-share">
+              <view class="mydis-key">累计分享</view>
+              <view class="mydis-val">
+                  <text class="mydis-val-num">{{totalshare}}</text>
+              </view>
+          </view>
+          <view class="distributor-share">
+              <view class="mydis-key">累计浏览</view>
+              <view class="mydis-val">
+                  <text class="mydis-val-num">{{totallook}}</text>
+              </view>
+          </view>
+      </view>
+  </view>
+</view>
+<!-- 列表显示 -->
+<view class="list-box">
+    <view class="list-item line">
+      <i class="iconfont icon-mingpianmoban icon3-1"></i><view class="item-name">我的名片</view>
+       <i class="iconfont icon-iconfontjiantou2 go"></i>
+    </view>
+    <view class="list-item line"  wx:if="{{isbrand}}">
+      <i class="iconfont icon-wode icon3-2"></i><view class="item-name">我的经销商</view>
+      <i class="iconfont icon-iconfontjiantou2 go"></i>
+    </view>
+    <view class="list-item line">
+      <i class="iconfont icon-shiyongbangzhu icon3-3"></i><view class="item-name">使用帮助</view>
+      <i class="iconfont icon-iconfontjiantou2 go"></i>
+    </view>
+    <view class="list-item line">
+      <i class="iconfont icon-lianxikefu icon3-4"></i><view class="item-name">联系客服</view>
+      <i class="iconfont icon-iconfontjiantou2 go"></i>
+    </view>
+    <view class="list-item line">
+      <i class="iconfont icon-yijianfankui icon3-5"></i><view class="item-name">意见反馈</view>
+      <i class="iconfont icon-iconfontjiantou2 go"></i>
+    </view>
+    <view class="list-item ">
+      <i class="iconfont icon-set icon3-6"></i><view class="item-name">设置</view>
+      <i class="iconfont icon-iconfontjiantou2 go"></i>
+    </view>
+</view>

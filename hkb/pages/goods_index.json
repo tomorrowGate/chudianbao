@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "brief":"/pages/compnents/brief",
+    "goodlist": "/pages/compnents/goodlist",
+    "SwiperComponent":"/pages/compnents/swiper"
+  }
+}

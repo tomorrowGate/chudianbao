@@ -1,0 +1,202 @@
+/* hkb/pages/customized.wxss */
+page{
+  padding:24rpx;
+  box-sizing: border-box;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+  line-height: 76rpx;
+}
+.p-nor{
+  font-size: 35rpx;
+}
+.light{
+  color: #bdbdbd;
+  font-size: 29rpx;
+}
+.meal-say{
+  display: flex;
+  /* width:706rpx; */
+  height: 177rpx;
+  background: #ebf6ff;
+  border-radius: 16rpx;
+  padding:35rpx;
+  box-sizing: border-box;
+}
+.meal-say-left{
+  display: flex;
+  width: 215rpx;
+  color: #2fa0f3;
+  line-height: 107rpx;
+  font-size: 36rpx;
+  text-align: center;
+  border-right: 1rpx solid #999;
+
+}
+.meal-say-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 35rpx;
+}
+.meal-say-bold{
+  font-weight: bold;
+}
+.meal-say-nor{
+  font-size: 30rpx;
+}
+.set-meal{
+  display: flex;
+  justify-content: space-around;
+  margin:40rpx 0;
+}
+.set-meal .meal-item{
+  display: flex;
+  width: 220rpx;
+  height: 250rpx;
+  border:1rpx solid #bdbdbd;
+  border-radius:6rpx;
+}
+.set-meal .active{
+  background: rgba(47,160,243,0.1);
+  border:1rpx solid #2fa0f3;
+}
+.meal-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding:26rpx 0;
+  box-sizing: border-box;
+}
+.meal-title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.meal-body{
+  font-size: 28rpx;
+  color: #2fa0f3
+}
+.meal-money{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.meal-del-money{
+  font-size: 26rpx;
+  color: #bdbdbd;
+  text-decoration: line-through;
+}
+/* 立即购买 */
+.sub{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 200rpx;
+  margin-left: -24rpx;
+  /* margin: auto; */
+  background: #fff;
+}
+.submit{
+  height: 86rpx;
+  width: 550rpx;
+  line-height: 86rpx;
+  margin-top:50rpx;
+  color: #fff;
+  background: #2fa0f3;
+  border-radius: 43rpx;
+  font-size: 30rpx
+}
+/* 定制下单说明 */
+.p-foot{
+  margin: 30rpx;
+}
+.p-title{
+  height: 75rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+  line-height: 75rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.p{
+  margin-top: 35rpx;
+}
+.p-step{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:70rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.p-step-text{
+  width: 530rpx;
+  height: 105rpx;
+  line-height: 105rpx;
+  margin-bottom: 10rpx;
+  background: #ebf6ff;
+  font-size: 35rpx;
+  text-align: center;
+}
+.p-next{
+  height: 80rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 用户协议 */
+.button-foot{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:220rpx;
+}
+.button-foot-item{
+  height: 76rpx;
+  line-height: 76rpx;
+  width: 330rpx;
+  background: #f2f2f2;
+  color: #999;
+  font-size: 28rpx;
+}
+.button-foot .actice{
+  background: #2fa0f3;
+  color: #fff;
+}
+/* 弹窗 */
+.dialog{
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding:80rpx 0 ;
+  top: 30%;/* 乱填的 */
+  left: 75rpx;
+  width: 600rpx;
+  height: 400rpx;
+  box-shadow: 0rpx 0rpx 10rpx #000;
+  background: #eef3f7;
+  border-radius: 10rpx;
+  transform: translateX(750px);
+  z-index:15;
+  box-sizing: border-box;
+}
+.email{
+  font-size: 35rpx;
+  color: #2fa0f3;
+  margin-bottom: 35rpx;
+}
+.know{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height : 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-top: 1rpx solid #bbb;
+}
+
+.center{
+  margin: auto;
+  font-size: 35rpx;
+}

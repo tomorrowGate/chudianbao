@@ -1,0 +1,25 @@
+<!--pages/compnents/buss.wxml-->
+<!-- 人物 -->
+<view class="box">
+  <view class="box-item">
+    <image class="avitor"src="{{imgUrls}}"></image>
+  </view>
+  <view  class="box-item box-center">
+    <view class="center-top">
+      <view class="user-name">{{username}}</view>
+      <view class="brand">{{brand_name}}</view>
+    </view>
+    <view>
+      <text  class="center-bottom"> {{identity_str}}</text>
+    </view>
+  </view>
+  <view  class="box-item item-left" >
+    <view class="change">交换联系方式</view>
+    <view>
+      <slot></slot>
+      <!-- <button class="share" open-type="share">
+        分享名片
+      </button> -->
+    </view>
+  </view>
+</view>

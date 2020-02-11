@@ -1,0 +1,137 @@
+<!--pages/index/index2.wxml-->
+<swiper 
+  indicator-dots="{{indicatorDots}}"
+  indicator-color = "{{indicatorColor}}"
+  indicator-active-color = "{{indicatorActiveColor}}"
+  autoplay="{{autoplay}}" 
+  interval="{{interval}}" 
+  duration="{{duration}}"
+  class="swiper">
+  <block wx:for="{{imgUrls}}" wx:key="index" >
+    <swiper-item class="swiper-item">
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="outbox">
+    <view class="outbox-top">
+        <view class="imgbox">
+            <image class="title-img" src="/src/image/logo_1.png"
+    mode="aspectFit" width="266" height="180"></image>
+        </view>
+        <view class="head-main">
+            <text class="head-title">上派集成灶</text>
+            <text class="head-tag">品牌总部</text>
+            <text class="head-right light-font">
+                <text>简介</text> 
+                <i class="iconfont icon-iconfontjiantou2"></i>
+            </text>
+        </view>
+    </view>
+    <view class="outbox-bottom ellipsis">
+        上派集成灶是绍兴市上派电器有限公司的核心产品，
+        上派集成灶核心产品有眼吸净率达99.95%以上。有劲品牌系
+        列A21、A22、A23、A25凌派系列F13、F15分体式集成灶、
+        集成水槽、蒸汽炉、电烤箱等四大系列五大产品线。
+    </view>
+    <view class="outbox-add">
+        <i></i>
+        <text class="addtext light-font">杭州市延安路0000号</text>
+    </view>
+</view>
+
+<view class="distributor">
+    <view class="distributor-left">
+        <view class="mydis-key">我的经销商</view>
+        <view class="mydis-val">
+            <text class="mydis-val-num">65</text>位
+        </view>
+    </view>
+    <view class="distributor-right">
+        <view class="distributor-share">
+            <view class="mydis-key">本周分享</view>
+            <view class="mydis-val">
+                <text class="mydis-val-num">155</text>
+            </view>
+        </view>
+         <view class="distributor-share">
+            <view class="mydis-key">本周浏览</view>
+            <view class="mydis-val">
+                <text class="mydis-val-num">155</text>
+            </view>
+        </view>
+         <view class="distributor-share">
+            <view class="mydis-key">累计分享</view>
+            <view class="mydis-val">
+                <text class="mydis-val-num">155</text>
+            </view>
+        </view>
+         <view class="distributor-share">
+            <view class="mydis-key">累计浏览</view>
+            <view class="mydis-val">
+                <text class="mydis-val-num">155</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="myservice">
+    <view class="ser-title">我的服务</view>
+    <view class="ser-itembox">
+        <view class="ser-item">
+            <image class="ser-img" src="/src/image/store.png"></image>
+            <view class="ser-text">我的商品</view>
+        </view>
+        <view class="ser-item">
+            <image class="ser-img" src="/src/image/house.png"></image>
+            <view class="ser-text">小区订制</view>
+        </view>
+        <view class="ser-item">
+            <image class="ser-img" src="/src/image/case.png"></image>
+            <view class="ser-text">通用案例</view>
+        </view>
+        <view class="ser-item">
+            <image class="ser-img" src="/src/image/qi.png"></image>
+            <view class="ser-text">订制下单</view>
+        </view>
+        <view class="ser-item">
+            <image class="ser-img" src="/src/image/active.png"></image>
+            <view class="ser-text">定制活动</view>
+        </view>
+        <view class="ser-item">
+            <image class="ser-img" src="/src/image/more.png"></image>
+            <view class="ser-text">更多</view>
+        </view>
+    </view>
+</view>
+
+<view class="box-center">
+  <view class="outbox-normal outbox-top">
+    <text class="bolder-font"> 客服中心</text>
+    <view  class="light-font">
+      <text> 更多 </text>
+      <i class="iconfont icon-iconfontjiantou2"></i>
+    </view>
+  </view>
+  <view class="outbox-normal outbox-bottom">
+    <view class="server-line">服务热线：400-800-9218</view>
+    <view class="right"> <i class="iconfont icon-dianhua"></i> </view>
+  </view>
+</view>
+
+<view class="blank">
+
+</view>
+
+<import src="index2.wxml"/>
+<template is="item" />
+
+<template name="item">
+  <view class="customerser">
+    <image class="customimg" src="/src/image/custom_tel.png" mode="aspectFit"></image>
+  </view>
+</template>
+
+
+

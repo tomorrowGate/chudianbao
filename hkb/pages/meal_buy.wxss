@@ -1,0 +1,268 @@
+/* hkb/pages/meal_buy.wxss */
+
+page {
+  box-sizing: border-box;
+  background: #f5f5f5;
+}
+
+.rotatestar {
+  transform: rotate(-90deg);
+  transition: 0.3s;
+}
+
+.rotate {
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+
+.icon-iconfontjiantou2 {
+  font-size: 30rpx;
+}
+
+/* 定制下单说明 */
+.head{
+  padding: 0 20rpx;
+  background: #fff;
+}
+.p-foot {
+  margin-top: 30rpx;
+}
+
+.p-title {
+  height: 75rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+  line-height: 75rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.p {
+  margin: 35rpx 0;
+}
+
+.p-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.p-step-text {
+  width: 530rpx;
+  height: 105rpx;
+  line-height: 105rpx;
+  margin-bottom: 10rpx;
+  background: #ebf6ff;
+  text-align: center;
+}
+
+.p-next {
+  height: 80rpx;
+  margin-bottom: 10rpx;
+}
+
+.meal-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 26rpx 0;
+  box-sizing: border-box;
+}
+
+.meal-title {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.meal-body {
+  font-size: 28rpx;
+  color: #2fa0f3;
+}
+
+.meal-money {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.meal-del-money {
+  font-size: 26rpx;
+  color: #bdbdbd;
+  text-decoration: line-through;
+}
+
+.meal-say {
+  display: flex;
+  width: 706rpx;
+  height: 177rpx;
+  background: #ebf6ff;
+  border-radius: 16rpx;
+  padding: 35rpx;
+  box-sizing: border-box;
+}
+
+.meal-say-left {
+  display: flex;
+  width: 215rpx;
+  color: #2fa0f3;
+  line-height: 107rpx;
+  font-size: 36rpx;
+  text-align: center;
+  border-right: 1rpx solid #999;
+}
+
+.meal-say-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 35rpx;
+}
+
+.meal-say-bold {
+  font-weight: bold;
+}
+
+.meal-say-nor {
+  font-size: 30rpx;
+}
+
+.meal-intro {
+  font-size: 29rpx;
+  line-height: 42rpx;
+  margin-top:50rpx;
+  padding-bottom: 50rpx;
+}
+
+.emile {
+  color: #2fa0f3;
+}
+
+.clip-bord {
+  display: inline-block;
+  padding: 0 15rpx;
+  border-radius: 21rpx;
+  background: #2fa0f3;
+  color: #fff;
+  margin-left: 6rpx;
+}
+
+.info-detial {
+  padding: 20rpx;
+  margin-bottom: 21rpx;
+  background: #fff;
+  font-size: 30rpx;
+}
+
+.shop-circle {
+  margin-left: 18rpx;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  border-radius: 50%;
+  background: #1f9cfd;
+  color: #fff;
+  text-align: center;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  height: 84rpx;
+}
+
+.info-key {
+  text-align-last: justify;
+  width: 134rpx;
+  margin-right: 30rpx;
+}
+
+.info-value {
+  display: flex;
+  align-items: center;
+  width: 512rpx;
+}
+
+.info-detial .picker {
+  width: 462rpx;
+}
+
+.info-detial .text-name {
+  outline: 1rpx solid #f5f5f5;
+  padding: 10rpx 25rpx;
+  width: 100%;
+}
+
+.info-detial .text-tel {
+  width: 330rpx;
+  outline: 1rpx solid #f5f5f5;
+  padding: 10rpx 25rpx;
+  margin-right: 17rpx;
+}
+
+.info-detial .erroinput {
+  outline: #f00 solid 1rpx;
+}
+
+.info-item-detail {
+  display: flex;
+}
+
+.info-item-detail textarea {
+  padding: 0 25rpx;
+  height: 80px;
+}
+
+.licence {
+  width: 330rpx;
+}
+
+.get-verify {
+  width: 140rpx;
+  outline: 1rpx solid #f5f5f5;
+  padding: 10rpx 20rpx;
+  color: #1f9cfd;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.add-meal{
+  height: 105rpx;
+  line-height: 105rpx;
+  text-align: center;
+  color: #1f9cfd;
+  font-size: 34rpx;
+}
+.icon-tianjia1{
+  font-size: 40rpx;
+  margin-right: 10rpx;
+}
+.suv-butn {
+  margin: 60rpx auto;
+  width: 585rpx;
+  height: 90rpx;
+  background-color: #1f9cfd;
+  border-radius: 45rpx;
+  color: #fff;
+}
+
+.form-out {
+  padding: 20rpx;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.submit {
+  width: 580rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  color: #fff;
+  background: #2fa0f3;
+  border-radius: 43rpx;
+  font-size: 30rpx;
+}
+
+.sub{
+  padding-bottom: 100rpx;
+}

@@ -1,0 +1,145 @@
+<!--hkb/pages/statistics_index.wxml-->
+<!-- 经销商显示 -->
+<view class="custom-static" wx:if="{{!isBrand}}">
+    <view class="custom-static-title">
+        客户统计
+    </view>
+    <view class="custom-static-con">
+        <view class="static-item">
+            <view class="static-key lightfont">本周新客</view>
+            <view class="static-value">{{custStas.week_Customer}}</view>
+        </view>
+        <view class="static-item">
+            <view class="static-key lightfont">累计客户</view>
+            <view class="static-value">{{custStas.all_Customer}}</view>
+        </view>
+    </view>
+</view>
+
+<!-- 品牌总部显示 -->
+<view class="bandstatic"  wx:if="{{isBrand}}">
+    <view class="band-static-title">
+        <view class="band-title-left">
+            品牌经销商
+        </view>
+        <view class="band-title-right lightfont">
+            经销商列表
+            <i class="iconfont icon-iconfontjiantou2"></i>
+        </view>
+    </view>
+    <view class="band-con">
+        <text class="band-num"> {{nineShareData.my_jxs}}</text>位
+    </view>
+</view>
+
+<view class="datas">
+    <!-- 经销商显示 -->
+    <view class="brand-data mydata-outitem"  wx:if="{{!isBrand}}">
+        <view class="mydata-item">
+            <view class="mydata-item-key lightfont">本周分享</view>
+            <view class="mydata-item-value ">{{sharedata.week_share}}</view>
+        </view>
+        <view class="mydata-item">
+            <view class="mydata-item-key lightfont">本周浏览</view>
+            <view class="mydata-item-value ">{{sharedata.week_browse}}</view>
+        </view>
+        <view class="mydata-item">
+            <view class="mydata-item-key lightfont">累计分享</view>
+            <view class="mydata-item-value ">{{sharedata.all_share}}</view>
+        </view>
+        <view class="mydata-item">
+            <view class="mydata-item-key lightfont">累计浏览</view>
+            <view class="mydata-item-value ">{{sharedata.all_browse}}</view>
+        </view>
+    </view>
+
+    <!-- 品牌总部显示 -->
+    <view class="isdistributor"  wx:if="{{isBrand}}">
+        <view class="mydata">
+            <view class="mydata-title">我的数据</view>
+            <view class="mydata-outitem">
+                <view class="mydata-item">
+                    <view class="mydata-item-key lightfont">本周分享</view>
+                    <view class="mydata-item-value ">{{nineShareData.week_share}}</view>
+                </view>
+                <view class="mydata-item">
+                    <view class="mydata-item-key lightfont">本周浏览</view>
+                    <view class="mydata-item-value ">{{nineShareData.week_browse}}</view>
+                </view>
+                <view class="mydata-item">
+                    <view class="mydata-item-key lightfont">累计分享</view>
+                    <view class="mydata-item-value ">{{nineShareData.all_share}}</view>
+                </view>
+                <view class="mydata-item">
+                    <view class="mydata-item-key lightfont">累计浏览</view>
+                    <view class="mydata-item-value ">{{nineShareData.all_browse}}</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="mydata">
+            <view class="mydata-title">经销商数据</view>
+            <view class="mydata-outitem">
+                <view class="mydata-item">
+                    <view class="mydata-item-key lightfont">本周分享</view>
+                    <view class="mydata-item-value ">{{nineShareData.week_share2}}</view>
+                </view>
+                <view class="mydata-item">
+                    <view class="mydata-item-key lightfont">本周浏览</view>
+                    <view class="mydata-item-value ">{{nineShareData.week_browse2}}</view>
+                </view>
+                <view class="mydata-item">
+                    <view class="mydata-item-key lightfont">累计分享</view>
+                    <view class="mydata-item-value ">{{nineShareData.all_share2}}</view>
+                </view>
+                <view class="mydata-item">
+                    <view class="mydata-item-key lightfont">累计浏览</view>
+                    <view class="mydata-item-value ">{{nineShareData.all_browse2}}</view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+</view>
+
+<!-- 本周客户（经销商可见） -->
+<view class="connect-customer"  wx:if="{{!isBrand}}">
+    <view class="connect-tabbar">
+        <view class="connect-tabbar-box">
+            <view class="connect-tabbar-item connect-thisweek {{activeIndex==0?'active':''}}" bindtap="changeCustom" data-week="{{0}}">今日</view>
+            <view class="connect-tabbar-item connect-thisweek {{activeIndex==1?'active':''}}" bindtap="changeCustom" data-week="{{1}}">本周</view>
+            <view class="connect-tabbar-item connect-all {{activeIndex==2?'active':''}}" bindtap="changeCustom" data-week="{{2}}">本月</view>
+            <view class="connect-tabbar-item connect-all {{activeIndex==3?'active':''}}" bindtap="changeCustom" data-week="{{3}}">全部</view>
+        </view>
+    </view>
+
+    <view class="customer-items" wx:for="{{customersWeek}}" wx:key="{{index}}">
+        <view class="custom-databox">
+            <view class="custom-portrait imgbox">
+                <image src="{{item.portrait}}" class="portrait" mode="aspectFit"></image>
+            </view>
+            <view class="custom-data">
+                <view class="custom-name">{{item.real_name}}</view>
+                <view class="custom-tel">{{item.phone_mob}}</view>
+                <view class="near-vister">
+                    <text class="p">最近访问</text>
+                    <text class="p"> {{item.content}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="custom-rightbox">
+          <view><text class="vister-time">{{item.add_time}}</text></view>
+          <view class="customer-callbox " bindtap="callPhone" data-mob="{{item.phone_mob}}">
+              <i class="iconfont icon-dianhua "></i>
+          </view>
+        </view>
+    </view>
+
+    <view class="customer-items" wx:if="{{customersWeek.length<=0}}">
+      <view>暂无数据</view>
+    </view>
+</view>
+
+
+
+

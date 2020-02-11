@@ -1,0 +1,47 @@
+page{
+  background-color: #f9f8f8;
+}
+.perInfo{
+  width:100%;
+  height:auto;
+  padding:25rpx;
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.content{
+  background-color: #ffffff;
+}
+.per-item{
+  height:90rpx;
+  line-height: 90rpx;
+  margin:0rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.line{
+  border-bottom:1px solid #eaeaea;
+}
+.per-left{
+  color:#000000;
+}
+.per-right{
+  color:#8f8f8f;
+}
+.avitor{
+  width:62rpx;
+  height:62rpx;
+  border-radius: 31rpx;position: relative;
+  top:15rpx;
+}
+.last{position: relative;}
+.dot{
+  width:20rpx;
+  height:20rpx;
+  border-radius: 10rpx;
+  background-color: #fd4e2d;
+  position: absolute;top:35rpx;left:160rpx;
+
+}

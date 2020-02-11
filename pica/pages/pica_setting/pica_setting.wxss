@@ -1,0 +1,167 @@
+/* pica/pages/pica_setting/pica_setting.wxss */
+
+page {
+  background-color: #f9f8f8;
+}
+
+.setting {
+  display: flex;
+  /* padding: 0 18rpx; */
+  flex-direction: column;
+  box-sizing: border-box;
+  font-size: 32rpx;
+}
+
+.setting-item {
+  background: #fff;
+  margin: 18rpx 0;
+  padding: 0 25rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item1 {
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}
+
+.item {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 25rpx;
+  font-size: 30rpx;
+}
+
+.item-last {
+  margin-top: 30rpx;
+}
+
+.confirm {
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.light {
+  color: #bbb;
+}
+
+.line {
+  border-bottom: 1px solid #eaeaea;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  background: #fff;
+  font-size: 30rpx;
+}
+
+.line::after {
+  border: none;
+}
+
+.relogin {
+  color: #1f9cfd;
+}
+
+.item .button-hover {
+  color: #000;
+}
+
+.value {
+  color: #8f8f8f;
+}
+
+.info {
+  position: relative;
+}
+
+.dots {
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 7rpx;
+  background-color: #fd4e2d;
+  position: absolute;
+  top: 18rpx;
+  left: 120rpx;
+}
+
+.dialog-out{
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.7)
+}
+
+.dialog {
+  overflow: hidden;
+  width: 650rpx;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  left: 50rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  transform: rotateX(90deg);
+  z-index: 5;
+}
+
+.dialog .title{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #1f9cfd;
+  color: #fff;
+  text-align: left;
+  text-indent: 20rpx;
+}
+
+.dialog-input {
+  border: 1rpx solid #999;
+  padding: 10rpx;
+  width: 430rpx;
+}
+
+.input{
+  display: flex;
+  margin: 70rpx auto;
+  align-items: center;
+}
+.input .input-label{
+  margin-right: 20rpx;
+}
+
+.dialog-bottom {
+  position: absolute;
+  display: flex;
+  bottom: 0rpx;
+  height: 100rpx;
+  width: 100%;
+}
+
+.button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* border-top: 1rpx solid #666; */
+  background: #aaa;
+  color: #fff
+}
+
+.button+.button {
+  /* border-left: 1rpx solid #666; */
+  background: #1f9cfd;
+  color: #fff
+}

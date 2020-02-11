@@ -1,0 +1,24 @@
+<!--pages/compnents/brief.wxml-->
+<!-- 上派集成社 -->
+<view class="outbox">
+    <view class="outbox-top">
+        <view class="imgbox">
+            <image class="title-img" src="{{brief.logo}}"
+    mode="aspectFit"></image>
+        </view>
+        <view class="head-main">
+            <text class="head-title">{{brief.brand_name}}</text>
+            <text class="head-tag">{{brief.identity_str}}</text>
+            <view class="head-right light-font" bindtap="gotMoreMsg" data-tagid="i">
+                简介<i class="iconfont icon-iconfontjiantou2 {{brief.isbrief?'rotate':'rotatestar'}} " ></i>
+            </view>
+        </view>
+    </view>
+    <view class="outbox-bottom {{brief.isbrief?'':'ellipsis'}}">
+        {{!!brief.brand_content?brief.brand_content:"暂无介绍"}}
+    </view>
+    <view class="outbox-add">
+        <i class="iconfont "></i>
+        <text class="addtext light-font" wx:if="{{brief.identity==2}}">{{brief.address}}</text>
+    </view>
+</view>

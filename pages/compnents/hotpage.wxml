@@ -1,0 +1,20 @@
+<!--pages/compnents/hotpage.wxml-->
+<view wx:if="{{page.havePage}}">
+  <view class="pagetitle" >{{page.title}}</view>
+  <view class="sendtime">{{page.time}}</view>
+  <view class="pagecontent">
+      <text class="p">{{page.content}}</text>
+  </view>
+</view>
+
+<view class="pagetitle" >{{title}}</view>
+<view class="sendtime">{{time}}</view>
+
+<view class="pagecontent">
+    <rich-text nodes="{{content}}" class="p"></rich-text>
+</view>
+
+
+<view wx:if="{{page.havePage}}">
+    营销文案填充
+</view>

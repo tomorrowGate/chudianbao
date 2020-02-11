@@ -1,0 +1,114 @@
+<!--pages/index/index1.wxml-->
+<swiper 
+  indicator-dots="{{indicatorDots}}"
+  indicator-color = "{{indicatorColor}}"
+  indicator-active-color = "{{indicatorActiveColor}}"
+  autoplay="{{autoplay}}" 
+  interval="{{interval}}" 
+  duration="{{duration}}"
+  class="swiper">
+  <block wx:for="{{imgUrls}}" wx:key="index" >
+    <swiper-item class="swiper-item">
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="outbox">
+  <view class="imgbox">
+    <image  src="/src/image/hot.png"  mode="aspectFit" width="266" height="180" class="title-img"></image>
+  </view>
+  <swiper 
+    vertical = "{{swiperVerticle.vertical}}"
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}" 
+    duration="{{duration}}"
+    class="swiper-verticle">
+    <block wx:for="{{imgUrls}}" wx:key="index" >
+      <swiper-item>
+        <view class="swiper-out">{{swiperVerticle.datas}}</view>
+      </swiper-item>
+    </block>
+  </swiper> 
+   <i class="iconfont icon-iconfontjiantou2"></i>
+</view>
+
+<view class="box-center">
+  <view class="outbox-normal outbox-top">
+    <text class="bolder-font"> 客服中心</text>
+    <view  class="light-font">
+      <text> 更多 </text>
+      <i class="iconfont icon-iconfontjiantou2"></i>
+    </view>
+  </view>
+  <view class="outbox-normal outbox-bottom">
+    <view class="server-line">服务热线：400-800-9218</view>
+    <view class="right"> <i class="iconfont icon-dianhua"></i> </view>
+  </view>
+</view>
+
+<view class="box-center card-out">
+  <view class="colors-card">
+    <view class="card-top">品牌大学</view>
+    <view class="card-mid">让品牌推广更简单</view>
+    <view class="card-btn">
+      <text class="go">GO</text>
+      <i class="iconfont icon-jiantou go"></i>
+    </view>
+  </view>
+  <view class="colors-card colors-card2">
+    <view class="card-top">经销商学堂</view>
+    <view class="card-mid">教你轻松获客的秘诀</view>
+    <view class="card-btn">
+      <text class="go2">GO</text>
+      <i class="iconfont icon-jiantou go2"></i>
+    </view>
+  </view>
+</view>
+
+<view class="box-bottom">
+  <view>
+    <view class="intro-head">
+      <text class="intro-head-text">平台简介</text>
+    </view>
+    <view class="intro-mid">
+      <view class="intro-mid-center">synopsis</view>
+      <view class="intro-mid-more light-font">
+        更多
+        <i class="iconfont icon-iconfontjiantou2"></i>
+      </view>
+    </view>
+    <view class="intro-mid-imgbox">
+      <image src="/src/image/first_backfround.png" class="imgbox-img" />
+    </view>
+    <view class="intro-bottom">
+      <text>爱德华随后卡机是电脑卡基本上看见看见爱上不能打开满山白可见光卡的刷卡机更深刻</text>
+    </view>
+  </view>
+
+  <view>
+    <view class="intro-head">
+      <text class="intro-head-text">实景案例</text>
+    </view>
+    <view class="intro-mid">
+      <view class="intro-mid-center">case</view>
+    </view>
+      <scroll-view scroll-x="true" class="intro-mid-imgbox intro-mid-imgbox2">
+        <view class="imgbox" >
+          <image src="/src/image/bg_case.png" />
+        </view>
+        <view class="imgbox">
+          <image src="" />
+        </view>
+        <view class="imgbox">
+          <image src="" />
+        </view>
+      </scroll-view>
+      
+    <view class="intro-bottom">
+      <text>爱德华随后卡机是电脑卡基本上看见看见爱上不能打开满山白可见光卡的刷卡机更深刻</text>
+    </view>
+  </view>
+</view>
+
+

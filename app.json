@@ -1,0 +1,84 @@
+{
+  "pages": [
+    "pages/index/store_index",
+    "hkb/pages/authentication_index",
+    "pages/compnents/article_dialog",
+    "pages/compnents/getphone_dialog",
+    "hkb/share_village/share_village",
+    "hkb/share_vil_detail/share_vil_detail",
+    "hkb/share_good_detail/share_good_detail",
+    "pages/index/authorize",
+    "hkb/pages/customized",
+    "pica/pages/pica_setting/pica_setting",
+    "pica/pages/pica_sharecard/pica_sharecard",
+    "pica/pages/pica_orderstate/pica_orderstate",
+    "hkb/share_good/share_good",
+    "hkb/pages/statistics_index",
+    "pica/pages/pica_card/pica_card",
+    "hkb/pages/goods_detailed",
+    "hkb/pages/village_detailed",
+    "pages/index/hkb_index",
+    "hkb/pages/village_index",
+    "hkb/pages/goods_index",
+    "pages/logs/logs",
+    "pages/index/pica_index",
+    "pages/index/trends_index",
+    "pica/pages/pica_personInfo/pica_personInfo",
+    "pica/pages/pica_service/pica_service",
+    "pica/pages/pica_feedback/pica_feedback",
+    "pica/pages/pica_message/pica_message",
+    "pages/article/article_index",
+    "pica/pages/pica_service/pica_serviceDetail",
+    "pages/hotpage/hotpage_index",
+    "pages/link/link",
+    "pages/cussercenter/cussercenter_index",
+    "hkb/pages/meal_buy",
+    "pages/pic_intoduce/pic_intoduce",
+    "hkb/user_argument/user_argument"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "厨店宝",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#1f9cfd",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/store_index",
+        "iconPath": "/src/image/home.png",
+        "selectedIconPath": "/src/image/home0.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/hkb_index",
+        "iconPath": "/src/image/customer.png",
+        "selectedIconPath": "/src/image/customer0.png",
+        "text": "获客宝"
+      },
+      {
+        "pagePath": "pages/index/trends_index",
+        "iconPath": "/src/image/trends.png",
+        "selectedIconPath": "/src/image/trends0.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/index/pica_index",
+        "iconPath": "/src/image/my.png",
+        "selectedIconPath": "/src/image/my0.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

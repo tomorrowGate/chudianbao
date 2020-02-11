@@ -1,0 +1,76 @@
+/* hkb/share_village/share_village.wxss */
+
+page {
+  background: #f6f6f6;
+}
+
+/* 品牌商品 */
+
+.brandgoods {
+  background: #fff;
+  padding: 26rpx;
+}
+
+.listhead {
+  font-size: 35rpx;
+  font-weight: bold;
+  height: 100rpx;
+  padding: 0 18rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.listitembox {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 32rpx;
+  padding: 24rpx 0;
+}
+
+.listitembox-out {
+  margin-bottom: 20rpx;
+  border: 1rpx solid #ccc;
+  /* box-shadow: 0rpx 0rpx 6rpx #999; */
+  font-size: 32rpx;
+  padding: 24rpx 20rpx;
+}
+
+.listitembox .listitems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.3%;
+  margin-bottom: 18rpx;
+}
+
+.order-title {
+  padding-left: 10rpx;
+  color: #1f9cfd;
+  font-weight: bold;
+}
+
+.listitems .imgbox {
+  width: 218rpx;
+  height: 148rpx;
+  /* background: #000; */
+  border-radius: 10rpx;
+}
+
+.listitem-img {
+  width: 100%;
+  height: 100%;
+}
+
+.listitems .imgbox-rect {
+  width: 218rpx;
+  height: 218rpx;
+  background: #000;
+  border-radius: 10rpx;
+}
+
+.havenone {
+  height: 148rpx;
+  line-height: 148rpx;
+  text-align: center;
+}

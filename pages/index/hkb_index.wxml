@@ -1,0 +1,137 @@
+<!--pages/index/index2.wxml-->
+
+<!-- 轮播图 -->
+<SwiperComponent name="SwiperComponent" swiper="{{swiper}}"></SwiperComponent>
+
+<brief name="brief" brief="{{brief}}"></brief>
+
+<view class="distributor-box">
+  <view class="distributor" bindtap="goStatistics">
+      <!-- 品牌总部 -->
+      <view class="distributor-left" wx:if="{{identity==2}}">
+          <view class="mydis-key">我的经销商</view>
+          <view class="mydis-val">
+              <text class="mydis-val-num">{{sharesData.myDistribute}}</text>位
+          </view>
+      </view>
+      <!-- 经销商 -->
+      <view class="distributor-left" wx:if="{{identity==1||identity==3}}">
+          <view class="mydis-key">累计客户</view>
+          <view class="mydis-val">
+              <text class="mydis-val-num">{{sharesData.myCustomer}}</text>位
+          </view>
+      </view>
+      <view class="distributor-right">
+          <view class="distributor-share">
+              <view class="mydis-key">本周分享</view>
+              <view class="mydis-val">
+                  <text class="mydis-val-num">{{sharesData.weekShare}}</text>
+              </view>
+          </view>
+          <view class="distributor-share">
+              <view class="mydis-key">本周浏览</view>
+              <view class="mydis-val">
+                  <text class="mydis-val-num">{{sharesData.weekView}}</text>
+              </view>
+          </view>
+          <view class="distributor-share">
+              <view class="mydis-key">累计分享</view>
+              <view class="mydis-val">
+                  <text class="mydis-val-num">{{sharesData.totalShare}}</text>
+              </view>
+          </view>
+          <view class="distributor-share">
+              <view class="mydis-key">累计浏览</view>
+              <view class="mydis-val">
+                  <text class="mydis-val-num">{{sharesData.totalView}}</text>
+              </view>
+          </view>
+      </view>
+  </view>
+</view>
+
+<!-- 品牌总部 -->
+<view class="myservice" wx:if="{{brand.isBrand}}">
+    <view class="ser-title">我的服务</view>
+    <view class="ser-itembox">
+        <view class="ser-item" bindtap="goMyGoods">
+            <image class="ser-img" src="/src/image/store.png"></image>
+            <view class="ser-text">产品系列</view>
+        </view>
+        <view class="ser-item" bindtap="nextDone">
+            <image class="ser-img" src="/src/image/distributor.png" mode="aspectFit"></image>
+            <view class="ser-text">我的经销商</view>
+        </view>
+        <view class="ser-item" bindtap="nextDone">
+            <image class="ser-img" src="/src/image/more.png"></image>
+            <view class="ser-text">更多</view>
+        </view>
+    </view>
+</view>
+
+<!-- 经销商 -->
+<view class="myservice"  wx:if="{{!brand.isBrand}}">
+    <view class="ser-title">我的服务</view>
+    <view class="ser-itembox">
+        <view class="ser-item"  bindtap="goMyGoods">
+            <image class="ser-img" src="/src/image/store.png"></image>
+            <view class="ser-text">我的商品</view>
+        </view>
+        <view class="ser-item"  bindtap="goMyVillage">
+            <image class="ser-img" src="/src/image/house.png"></image>
+            <view class="ser-text">小区订制</view>
+        </view>
+        <view class="ser-item"  bindtap="nextDone">
+            <image class="ser-img" src="/src/image/case.png"></image>
+            <view class="ser-text">案例展示</view>
+        </view>
+        <view class="ser-item" bindtap="goBuy">
+            <image class="ser-img" src="/src/image/qi.png"></image>
+            <view class="ser-text">定制下单</view>
+        </view>
+        <view class="ser-item" bindtap="nextDone">
+            <image class="ser-img" src="/src/image/active.png"></image>
+            <view class="ser-text">定制活动</view>
+        </view>
+        <view class="ser-item" bindtap="nextDone">
+            <image class="ser-img" src="/src/image/more.png"></image>
+            <view class="ser-text">更多</view>
+        </view>
+    </view>
+</view>
+
+<view class="box-center">
+  <view class="outbox-normal outbox-top">
+    <text class="bolder-font"> 客服中心</text>
+    <view  class="light-font" bindtap="goCusSerCenter">
+      <text> 更多 </text>
+      <i class="iconfont icon-iconfontjiantou2"></i>
+    </view>
+  </view>
+  <view class="outbox-normal outbox-bottom">
+    <view class="server-line">服务热线：{{server_num}}</view>
+    <view class="right" bindtap="callPhone"> <i class="iconfont icon-dianhua"></i> </view>
+  </view>
+</view>
+
+<view class="blank">
+
+</view>
+
+<import src="hkb_index.wxml"/>
+<template is="item" />
+
+<template name="item">
+  <view class="customerser">
+    <contact-button size="100"></contact-button>
+    <!-- <button open-type='contact' session-from='weapp'>客服-联系我们</button> -->
+    <image class="customimg" src="/src/image/custom_tel.png" mode="aspectFit"></image>
+    <view class="customerser-contact">客服</view>
+  </view>
+</template>
+
+<view class="blankpage" hidden="{{!blankpage.isVistor}}"></view>
+
+<dialog name="dialog" bind:sure="goAuthentication" bind:cancle="goStore" wx:if="{{blankpage.isVistor}}"></dialog>
+
+

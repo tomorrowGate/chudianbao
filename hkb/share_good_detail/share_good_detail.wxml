@@ -1,0 +1,54 @@
+<!--hkb/share_good_detail/share_good_detail.wxml-->
+<!--hkb/pages/goods_.wxml-->
+<!-- 上派集成社 -->
+<brief name="brief" brief="{{brief}}"></brief>
+
+<!-- 用户信息 -->
+<view class="box">
+    <view class="box-item" bindtap="goInfo">
+      <image class="avitor"src="{{userInfo.imgUrls}}" bindtap="goIntoInfo"></image>
+    </view>
+    <view  class="box-item box-center" bindtap="goIntoInfo">
+      <view class="center-top">
+        <view class="user-name">{{userInfo.username}}</view>
+        <view class="brand">{{userInfo.identity_str}}</view>
+      </view>
+      <view>
+        <text  class="center-bottom"> {{userInfo.brand_name}}</text>
+      </view>
+    </view>
+    <view  class="box-item item-left" >
+      <view class="change" bindtap="addPhoneContact">交换联系方式</view>
+      <button class="share" open-type="share">
+        分享名片
+      </button>
+    </view>
+  </view>
+<!-- 商家信息 -->
+<personcard name="personcard" share="{{share}}" shareInfo="{{shareInfo}}"></personcard>
+
+  <!-- 品牌商品 -->
+<view class="brandgoods">
+    <view class="brandhead listhead">
+        品牌商品
+    </view>
+    <view class="listitembox">
+        <view class="havenone" wx:if="{{!brand.product.length}}">您暂时还没有商品~</view>
+        <view class="listitems" wx:for="{{brand.product}}" data-p_id="{{item.product_id}}" wx:key="index">
+            <view 
+              class="imgbox-rect"
+              bindtap="showGallery" 
+              data-imgsrc="{{item.default_image}}" 
+              data-p_id="{{item.cate_id||''}}" 
+              data-product_id="{{item.product_id||''}}"
+              data-url="{{item.product_link}}">
+                <image src="{{item.default_image}}" class="listitem-img"  mode="aspectFit"/>
+            </view> 
+            <view class="listitem-text">{{item.product_name}}</view>
+        </view>
+    </view>
+    <!-- 画廊 -->
+    <gallery  name="gallery" gallery="{{gallery}}" bind:sure="goVr"></gallery>
+</view>
+<getphone name="getphone" wx:if="{{!isDiaShow}}"></getphone>
+

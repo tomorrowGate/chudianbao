@@ -1,0 +1,78 @@
+/* pages/compnents/brief.wxss */
+ @import "/app.wxss";
+/* 上派信息 */
+.outbox{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding-bottom: 20rpx;
+    margin: 20rpx 0;
+  }
+  .outbox .outbox-top{
+      display: flex;
+      align-items: center;
+      height: 65rpx;
+  }
+  .head-main{
+      display: flex;
+      align-items: center;
+      flex:1;
+      vertical-align: middle;
+  }
+  .outbox .head-right{
+      position: absolute;
+      right: 28rpx;
+      
+  }
+  .outbox .head-right .icon-iconfontjiantou2{
+    display: inline-block;
+  }
+  .rotatestar{
+    transform: rotate( 90deg );
+    transition:.3s;
+  }
+  .rotate{
+    transform: rotate( -90deg );
+    transition:.3s;
+  }
+  .light-font{
+    font-size: 28rpx;
+    color: #c2c2c2;
+  }
+  .outbox-top .head-main{
+      padding-left: 25rpx;
+      font-size: 35rpx;
+      border-left: 1rpx solid #ccc;
+  }
+  .outbox-top .head-tag{
+      margin-left: 15rpx;
+      padding: 0 17rpx;
+      font-size: 25rpx;
+      border-radius: 17rpx 17rpx 17rpx 0;
+      background: #1f9cfd;
+      color: #fff;
+  }
+  .outbox-bottom{
+      padding: 20rpx 20rpx 0;
+      font-size: 30rpx;
+  }
+  .outbox-add{
+    padding-left:20rpx;
+  }
+  .ellipsis{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .outbox .imgbox{
+    width: 195rpx;
+    height: 65rpx;
+    overflow: hidden;
+  }
+  .imgbox .title-img{
+    height: 100%;
+    width:100%;
+    /* transform: scale(1.8); */
+  }

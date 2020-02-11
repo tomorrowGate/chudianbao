@@ -1,0 +1,82 @@
+<!--pages/index/index3.wxml-->
+
+    <swiper 
+    indicator-dots="{{indicatorDots}}"
+    indicator-color = "{{indicatorColor}}"
+    indicator-active-color = "{{indicatorActiveColor}}"
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}" 
+    duration="{{duration}}"
+    class="swiper">
+    <block wx:for="{{imgUrls}}" wx:key="index" >
+        <swiper-item class="swiper-item">
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+    </block>
+    </swiper>
+
+    <view class="outbox">
+        <view class="outbox-top">
+            <view class="imgbox">
+                <image class="title-img" src="/src/image/logo_1.png"
+        mode="aspectFit" width="266" height="180"></image>
+            </view>
+            <view class="head-main">
+                <text class="head-title">上派集成灶</text>
+                <text class="head-tag">品牌总部</text>
+                <text class="head-right light-font">
+                    <text>简介</text> 
+                    <i class="iconfont icon-iconfontjiantou2"></i>
+                </text>
+            </view>
+        </view>
+        <view class="outbox-bottom ellipsis">
+            上派集成灶是绍兴市上派电器有限公司的核心产品，
+            上派集成灶核心产品有眼吸净率达99.95%以上。有劲品牌系
+            列A21、A22、A23、A25凌派系列F13、F15分体式集成灶、
+            集成水槽、蒸汽炉、电烤箱等四大系列五大产品线。
+        </view>
+        <view class="outbox-add">
+            <i></i>
+            <text class="addtext light-font">杭州市延安路0000号</text>
+        </view>
+    </view>
+
+    <view class="hot">
+        <view class="hot-title">品牌热点</view>
+        <view class="hot-itemBox">
+            <view class="hot-item"><text></text> 上派上海经销商销售额破一亿</view>
+            <view class="hot-item"><text></text> 简约而不简单的设计，上派引领新生活</view>
+            <view class="hot-item"><text></text> 只能家居生活从次开始，上派新模式正式上线.只能家居生活从次开始，上派新模式正式上线</view>
+        </view>
+    </view>
+
+
+
+    <view class="brand">
+        <view class="brand-head">
+            <view class="brand-head-item"  bindtap='brand'>品牌</view>
+            <view class="brand-head-item">经销商</view>
+            <view class="brand-head-item" bindtap='goods'>产品</view>
+        </view>
+        <view class="brand-item" wx:for="{{brand}}"  wx:key="index">
+            <view class="item-conleft">
+                <view class="item-textcontent ellipsis">{{item.dataText}}</view>
+                <view class="item-othercon">
+                    <view class="item-time light-font">{{item.dataTime}}</view>
+                    <view class="item-readnum light-font">{{item.dataRead}}阅读</view>
+                </view>
+            </view>
+        <view class="item-conright imgbox" wx:if="{{item.dataIfImg}}">
+            <image class="item-img" src="{{item.dataImgUrl}}"></image>
+        </view>
+        </view>
+    </view>
+
+
+
+
+
+
+<import src="index2.wxml"/>
+<template is="item" />

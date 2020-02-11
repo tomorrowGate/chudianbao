@@ -1,0 +1,44 @@
+/* pages/compnents/goodlist.wxss */
+ @import "/app.wxss";
+
+ /* 品牌商品 */
+  .brandgoods{
+      background: #fff;
+      padding:26rpx;
+  }
+  .listhead{
+    font-size: 35rpx;
+    font-weight: bold;
+    height: 100rpx;
+    padding:0 18rpx;
+    line-height: 100rpx;
+    border-bottom:1rpx solid #ccc;
+  }
+  .listitembox{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap:wrap;
+      font-size: 32rpx;
+      padding:24rpx 0;
+  }
+  .listitems .imgbox{
+      width: 218rpx;
+      height: 148rpx;
+      background: #000;
+      border-radius:10rpx;
+  }
+  .listitems .imgbox-rect{
+      width: 218rpx;
+      height: 218rpx;
+      background: #000;
+      border-radius:10rpx;
+  }
+  .listitem-img{
+      width: 100%;
+      height: 100%;
+  }
+  .havenone{
+    height: 148rpx;
+    line-height: 148rpx;
+    text-align: center;
+  }

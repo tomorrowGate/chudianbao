@@ -1,0 +1,56 @@
+<!--pages/index/index3.wxml-->
+<!-- swiper -->
+<view class="white">
+  <SwiperComponent name="SwiperComponent" swiper="{{swiper}}"></SwiperComponent>
+    <!-- 品牌简介 -->
+    <brief name="brief" brief="{{brief}}"></brief>
+</view>
+ 
+    <view class="hot">
+        <view class="hot-title">品牌热点</view>
+        <view class="hot-itemBox" >
+            <view class="hot-item"
+             wx:for="{{brand_hot}}"
+              wx:key="{{index}}"  
+              data-aid="{{item[1]}}"
+              bindtap="goHotpage">
+              <text></text> {{item[0]}}
+            </view>
+            <view class="hot-item" wx:if="{{brand_hot.length<=0}}"><text></text> 暂无数据</view>
+        </view>
+    </view>
+
+    <view class="brand">
+        <view class="brand-head">
+            <view class="brand-head-item  {{isActive==0?'active':''}}"  data-type="0" bindtap='get_article'>品牌</view>
+            <view class="brand-head-item  {{isActive==1?'active':''}}" data-type="1" bindtap="get_article">经销商</view>
+            <view class="brand-head-item  {{isActive==2?'active':''}}" data-type="2" bindtap="get_article">产品</view>
+        </view>
+        <view class="brand-item" 
+              wx:for="{{articles}}"  
+              wx:key="{{index}}" 
+              data-aid="{{item.article_id}}"
+              bindtap="goHotpage">
+            <view class="item-conleft">
+                <view class="item-textcontent ellipsis">{{item.title}}</view>
+                <view class="item-othercon">
+                    <view class="item-time light-font">{{item.add_time}}</view>
+                    <view class="item-readnum light-font">{{item.visits}}阅读</view>
+                </view>
+            </view>
+            <view class="item-conright imgbox">
+                <image class="item-img" src="{{item.picture}}"></image>
+            </view>
+        </view>
+        <view class="brand-item" wx:if="{{articles.length<=0}}">
+            <view  class="item-conleft">
+              暂无数据~
+            </view>
+        </view>
+    </view>
+
+<import src="hkb_index.wxml"/>
+<template is="item" />
+<view class="blankpage" hidden="{{!blankpage.isVistor}}"></view>
+
+<dialog name="dialog" bind:sure="goAuthentication" bind:cancle="goStore" wx:if="{{blankpage.isVistor}}"></dialog>

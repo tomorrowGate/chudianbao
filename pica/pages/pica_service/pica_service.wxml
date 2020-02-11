@@ -1,0 +1,5 @@
+<view class="service" >
+  <view class="service-item line"  bindtap="goDetail" wx:for="{{articles}}" wx:key="index" data-a_id="{{item.article_id}}">
+      <view class="text">{{item.title}}<i class="iconfont icon-iconfontjiantou2 go"></i></view>
+  </view>
+</view>

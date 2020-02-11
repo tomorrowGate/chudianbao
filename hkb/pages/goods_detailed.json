@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的商品",
+  "usingComponents": {
+    "brief": "/pages/compnents/brief",
+    "personcard": "/pages/compnents/personcard",
+    "gallery": "/pages/compnents/gallery"
+
+  }
+}

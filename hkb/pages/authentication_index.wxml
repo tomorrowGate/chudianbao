@@ -1,0 +1,177 @@
+<!--hkb/pages/authentication_index.wxml-->
+<!-- 选择品牌 -->
+<view class="brand-select">
+    <view class="p">请输入您的品牌：</view>
+    <view class="brand-form">
+        <view class="tranglePramer">
+          <view>
+            <input type="text" 
+            bindinput="filter" 
+            bindfocus="filter" 
+            bindblur="clearFilter"
+            class="input" 
+            data-filterdata="{{fuzzyQuery}}"
+            value="{{fuzzyQuery.inputValue}}"
+             data-type_id="{{0}}"
+             placeholder="请输入您的品牌"/>
+            <i class="iconfont icon-xiasanjiao trangle"></i>
+          </view>
+        </view>
+       <!--  <view class="brand-add" bindtap="watchData">
+            <label for="newBrand"><text class="bluetext">新的品牌</text></label>
+            <switch class="brand-switch" id="newBrand" type="switch"  bindchange="switchChange"/>
+        </view> -->
+
+        <view  
+          class="input-items" 
+          wx:for="{{fuzzyQuery.filterData}}" 
+          wx:key="{{index}}" 
+          bindtap="makesure" 
+          data-brand_id="{{item.brand_id}}"
+          data-type_id="{{0}}"
+          data-indexkey="{{item.brand_name}}">{{item.brand_name}}</view>
+    </view>
+</view>
+
+<!-- 选择身份 -->
+<view class="id-select">
+    <view class="p">请选择您的身份：</view>
+    <view class="id-itemsbox">
+        <view class="id-item {{!(idType.isBrand===true)?'item-normal':'itemselect'}}" bindtap="changeIdType" data-idType="0">
+            品牌总部
+          <view class="cir"><icon class="year" type="success_no_circle" size="16" color="#1f9cfd" hidden="{{!(idType.isBrand===true)}}"/></view>
+        </view>
+        <!-- <view class="id-item  {{idType.isBrand===false?'itemselect':''}}" bindtap="changeIdType"  data-idType="1"> -->
+        <view class="id-item {{!(idType.isBrand===false)?'item-normal':'itemselect'}}" bindtap="changeIdType"  data-idType="1">
+            品牌经销商
+          <view class="cir"><icon class="year" type="success_no_circle" size="16" color="#1f9cfd" hidden="{{!(idType.isBrand===false)}}"/></view>
+        </view>
+    </view>
+</view>
+
+<!-- 选择经销商身份 -->
+<view class="brand-select" hidden="{{idType.isBrand}}">
+    <view class="p">请选择经销商门店：</view>
+    <view class="brand-form">
+        <view class="tranglePramer">
+          <view class="info-value">
+              <picker
+                class="picker " 
+                mode="region" 
+                bindchange="bindRegionChange" 
+                value="{{storeInfo.region}}"
+                custom-item="{{customItem}}">
+                  <input class="text-name" 
+                  bindfocus="getLocation"
+                  placeholder="请输入您的门店地址"
+                  value="{{storeInfo.region}}"
+                  disabled="{{true}}"/>
+                  <!-- <view class="text-name lication" >{{storeInfo.region}}</view> -->
+              </picker>
+          </view>
+          <i class="iconfont icon-xiasanjiao trangle"></i>
+            <!-- <input type="text" 
+            bindinput="filter" 
+            bindfocus="filter" 
+            bindblur="clearFilter"
+            data-filterdata="{{fuzzyQuery2}}"
+            disabled = "{{!canDistributor}}"
+            class="input" value="{{fuzzyQuery2.inputValue}}"
+             data-type_id="{{1}}"/>
+            <i class="iconfont icon-xiasanjiao trangle"></i> -->
+      </view>
+        <!-- <view class="brand-add">
+            <label for="newDistributor"><text class="bluetext">新经销商</text></label>
+            <switch class="brand-switch" 
+            disabled = "{{!canDistributor}}" 
+            id="newDistributor" 
+            checked="{{!canDistributor}}" 
+            type="switch" bindchange="switchChangeDis"/>
+        </view> -->
+          <view  
+            class="input-items" 
+            wx:for="{{fuzzyQuery2.filterData}}" 
+            wx:key="{{index}}" 
+            bindtap="makesure" 
+            data-jxs_id="{{item.user_id}}"
+            data-type_id="{{1}}"
+            data-indexkey="{{item.real_name2}}"
+          >
+            {{item.real_name2}}
+          </view>
+    </view>
+</view>
+
+<!-- 详细信息 -->
+<view class="info-detial">
+    <view class="info-item">
+        <view class="info-key">详细信息</view>
+        <view class="info-value">
+            <view class="shop-circle {{brief.isshopbrief?'rotatestar':'rotate'}}">
+                <i class="iconfont icon-iconfontjiantou2"></i>
+            </view>
+        </view>
+    </view>
+    <view class="detail-per">
+        <view class="info-item">
+            <view class="info-key">姓名</view>
+            <view class="info-value">
+                <input class="text-name"  placeholder="请输入您的姓名" bindblur="set_value" data-canshu="real_name2"/>
+            </view>
+        </view>
+    </view>
+    <view class="detail-per">
+        <view class="info-item">
+            <view class="info-key">联系方式</view>
+            <view class="info-value">
+                <input class="text-tel  {{storeInfo.isErro?'erroinput':''}}" 
+                 placeholder="请输入您的联系方式"
+                 bindblur="checkTel"
+                 type="number"
+                 bindblur="set_value" data-canshu="phone_mob"
+                 />
+                <view class="get-verify" bindtap="getCode">{{storeInfo.second>0?(storeInfo.second+'s'):"获取验证"}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="detail-per">
+        <view class="info-item">
+            <view class="info-key">验证码</view>
+            <view class="info-value">
+                <input class="text-name" placeholder="请输入您的验证码" bindblur="set_value" data-canshu="yz_num"/>
+            </view>
+        </view>
+    </view>
+    <view class="detail-per" hidden="{{idType.isBrand===false}}">
+        <view class="info-item">
+            <view class="info-key">联系地址</view>
+            <view class="info-value">
+              <picker
+                class="picker " 
+                mode="region" 
+                bindchange="bindRegionChange" 
+                value="{{storeInfo.region}}"
+                custom-item="{{customItem}}">
+                  <input class="text-name" 
+                  bindfocus="getLocation"
+                  placeholder="请输入您的联系地址"
+                  value="{{storeInfo.region}}"
+                  disabled="{{true}}"/>
+              </picker>
+            </view>
+        </view>
+    </view>
+    <view class="info-item-detail">
+        <view class="info-key">详细地址</view>
+        <view class="info-value" wx:if="{{!idType.isShowDia}}">
+            <textarea class="text-name" bindblur="bindTextAreaBlur" placeholder="请输入详细地址" bindinput="set_value" data-canshu="address"/>   
+        </view>
+    </view>
+</view>
+<!-- 提交申请 -->
+<button class="suv-butn" bindtap="submitForm">
+    申请认证
+</button>
+
+<dialog name="dialog" dialog="{{dialog}}" bind:sure="goHkb" bind:cancle="goCancle" wx:if="{{idType.isShowDia}}"></dialog>
+

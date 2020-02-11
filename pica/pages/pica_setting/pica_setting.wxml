@@ -1,0 +1,75 @@
+<!--pica/pages/pica_setting/pica_setting.wxml-->
+<view class="setting">
+  <view class="setting-item item1" bindtap="goMyMsg">
+    <view class="info">我的信息
+      <view class="dots" wx:if="{{false}}"></view>
+    </view>
+    <view class="value">
+      <i class="iconfont icon-iconfontjiantou2 go"></i>
+    </view>
+  </view>
+  <view class="item">
+    <!-- <button class="item-top confirm line" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> -->
+    <view class="item-top confirm line" bindtap="openDia" data-type="phone" data-phone="{{phone_mob}}">
+      <view>手机认证</view>
+      <view class='light'>{{phone_mob||""}}</view>
+      <view class="value">{{isPhoneBind?'已设置':'未设置'}}
+        <i class="iconfont icon-iconfontjiantou2 go"></i>
+      </view>
+    </view>
+
+
+    <!-- <button open-type="getUserInfo" class='item-bottom confirm line' bindgetuserinfo="getUserInfo"> -->
+    <view class="item-top confirm line" bindtap="openDia" data-type="wx" data-wx="{{wx_id}}">
+      <view>微信认证</view>
+      <view class='light'>{{wx_id||""}}</view>
+      <view class="value">{{isWxCheck?'已设置':'未设置'}}
+        <i class="iconfont icon-iconfontjiantou2 go"></i>
+      </view>
+    </view>
+
+  </view>
+  <view class="setting-item item1" wx:if="{{false}}">
+    <view>地址管理</view>
+    <view class="value">
+      <i class="iconfont icon-iconfontjiantou2 go"></i>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-top confirm line">
+      <view>微信公众号</view>
+      <view class="value">微信搜索:xxx
+        <i class="iconfont icon-iconfontjiantou2 go"></i>
+      </view>
+    </view>
+    <view class="item-bottom confirm">
+      <view>关于我们</view>
+      <view class="value">V1.0.2
+        <i class="iconfont icon-iconfontjiantou2 go"></i>
+      </view>
+    </view>
+  </view>
+  <view class="item item-last" bindtap="goReAuthe">
+    <view class="item-top confirm line">
+      <view class="relogin">重新登录</view>
+      <view class="value">
+        <i class="iconfont icon-iconfontjiantou2 go"></i>
+      </view>
+    </view>
+  </view>
+
+  <view class="dialog" animation="{{animationData}}">
+    <view class="title">{{isPhoneInput?'手机认证':'微信认证'}}</view>
+    <view class="input">
+      <view class="input-label">{{isPhoneInput?'手机认证':'微信认证'}}:</view>
+      <input wx:if="{{isPhoneInput}}" class="dialog-input" type="number" placeholder="请输入手机号" value="{{storeInfo.tel}}" bindinput="setPhone" />
+
+      <input wx:if="{{!isPhoneInput}}" class="dialog-input" type="text" placeholder="请输入微信号" value="{{storeInfo.wxId}}" bindinput="setWx" />
+    </view>
+    <view class="dialog-bottom">
+      <view class="cencle button" bindtap="cencle" data-type="cencle">取消</view>
+      <view class="sure button" bindtap="sure" data-type="{{isPhoneInput?'phone':'wx'}}">确定</view>
+    </view>
+  </view>
+  <view class="dialog-out" animation="{{animationData2}}" bindtap="cencle" hidden="{{!btn}}"></view>
+</view>

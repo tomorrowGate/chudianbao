@@ -1,0 +1,13 @@
+<!--pages/compnents/article_dialog.wxml-->
+<view class="dialog-rotate scale" animation="{{animationData}}" catchtouchmove="{{true}}">
+  <view class="input">
+    <view class="input-head">{{detail.setmeal_name}}</view>  
+    <scroll-view class="input-body" scroll-y="{{true}}" >{{detail.setmeal_remark}}</scroll-view>
+  </view>
+ <!--  <view class="dialog-bottom">
+    <view class="sure button">
+      <button class="getPhoneNumber" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">确定</button>
+    </view>
+  </view> -->
+</view>
+<view class="dialog-out" bindtap="cencle" hidden="{{isMask}}" catchtouchmove="{{true}}"></view>

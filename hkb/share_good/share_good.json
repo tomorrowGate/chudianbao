@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "brief": "/pages/compnents/brief",
+    "goodlist": "/pages/compnents/goodlist",
+    "getphone": "/pages/compnents/getphone_dialog",
+    "SwiperComponent": "/pages/compnents/swiper"
+  }
+}

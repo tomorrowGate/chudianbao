@@ -1,0 +1,103 @@
+/* pica/pages/pica_orderstate/pica_orderstate.wxss */
+
+.orders {
+  height: 94rpx;
+  line-height: 94rpx;
+  padding: 0 40rpx;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.state {
+  display: flex;
+  flex-direction: row;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+
+.active {
+  border-bottom: 1px solid #2fa0f3;
+  color: #2fa0f3;
+}
+
+.orderDetail {
+  margin: 20rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14rpx;
+  height: 214rpx;
+  line-height: 214rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  box-shadow: -2px 0 3px #f8f8f8, 2px 0px 3px #f8f8f8, 0 -2px 3px #f8f8f8, 0 2px 3px #f8f8f8;
+  margin-bottom: 20rpx;
+}
+
+.order-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav1 {
+  height: 32rpx;
+  margin-top: 26rpx;
+  line-height: 32rpx;
+  font-size: 24rpx;
+  color: #a5a5a5;
+}
+
+.nav2 {
+  height: 35rpx;
+  margin-top: 27.7rpx;
+  line-height: 35rpx;
+  font-size: 32rpx;
+}
+
+.nav3 {
+  height: 55.5rpx;
+  margin-top: 22rpx;
+  line-height: 55.5rpx;
+  font-size: 20rpx;
+  color: #a9a9a9;
+}
+
+.btns-box {
+  display: flex;
+}
+
+.but {
+  font-size: 30rpx;
+  color: #00a0e9;
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-right: 16rpx;
+  border-radius: 15px;
+  border: 1px solid #00a0e9;
+  text-align: center;
+}
+
+.noOrder {
+  position: relative;
+}
+
+.noOrder image {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.text {
+  position: absolute;
+  top: 563rpx;
+  width: 280rpx;
+  height: 30rpx;
+  left: 50%;
+  margin-left: -140rpx;
+  font-size: 28rpx;
+  color: #7c7c7c;
+}

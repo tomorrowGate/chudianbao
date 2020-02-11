@@ -1,0 +1,6 @@
+/* hkb/user_argument/user_argument.wxss */
+.pagecontent{
+  padding:20rpx;
+  box-sizing: border-box;
+  font-size: 35rpx;
+}

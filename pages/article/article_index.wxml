@@ -1,0 +1,15 @@
+<!--pages/article/article_index.wxml-->
+<!-- <hotpage  name="hotpage" page="{{page}}"></hotpage>  -->
+<view  hidden="{{isBrandOrUni}}">
+  <view class="pagetitle" >{{title}}</view>
+  <!-- <view class="sendtime">{{time}}</view> -->
+
+  <view class="pagecontent">
+      <rich-text nodes="{{content}}" class="p"></rich-text>
+  </view>
+</view>
+
+<view hidden="{{!isBrandOrUni}}">
+  <rich-text nodes="{{content}}" class="img"></rich-text>
+</view>
+

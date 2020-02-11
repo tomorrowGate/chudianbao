@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "小区定制",
+  "usingComponents": {
+    "brief": "/pages/compnents/brief"
+    ,"gallery":"/pages/compnents/gallery"
+    ,"personcard":"/pages/compnents/personcard"
+  }
+}

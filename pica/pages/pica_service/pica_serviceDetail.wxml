@@ -1,0 +1,7 @@
+<!--pica/pages/pica_service/pica_serviceDetail.wxml-->
+<view class="pagetitle" >{{title}}</view>
+<view class="sendtime">{{time}}</view>
+
+<view class="pagecontent">
+    <rich-text nodes="{{content}}" class="p"></rich-text>
+</view>

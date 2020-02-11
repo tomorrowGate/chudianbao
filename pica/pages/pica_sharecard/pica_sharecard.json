@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "brief": "/pages/compnents/brief",
+    "personcard": "/pages/compnents/personcard"
+  }
+}
